@@ -4,7 +4,14 @@
 /public/storage
 /storage/*.key
 /vendor
-/public
+/public/profile-image
+/public/review_image
+/public/Team-image
+/public/blogs_img
+/public/certificate
+/public/course-image
+/public/mail-assets
+/public/packages_image
 /storage/logs
 .env
 .env.backup

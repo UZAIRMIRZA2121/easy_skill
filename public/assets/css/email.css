@@ -1,0 +1,149 @@
+body {
+    background: #f4f4f4;
+    padding: 20px;
+}
+
+.email-container {
+    max-width: 500px;
+    margin: auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.email-container h4 {
+    margin: 0px;
+    line-height: 140%;
+    text-align: center;
+    word-wrap: break-word;
+    font-family: 'Playfair Display', serif;
+    font-size: 35px;
+    font-weight: 400;
+}
+
+.logo {
+    max-width: 250px;
+    margin-bottom: 10px;
+}
+
+.earning-text {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.amount {
+    font-size: 28px;
+    font-weight: bold;
+    color: #000;
+}
+
+.btn-custom {
+    background-color: #002db3;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 15px;
+    font-size: 18px;
+    transition: 0.3s ease;
+}
+
+.btn-custom:hover {
+    background-color: #001a80;
+}
+
+.inner-text {
+    background: url('https://www.skillsider.pk/mail-assets/image-2.gif') center/cover no-repeat;
+    padding: 20px;
+    margin: 0px;
+    line-height: 140%;
+    text-align: center;
+    word-wrap: break-word;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    border-radius: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .email-container {
+        width: 95%;
+        padding: 15px;
+    }
+
+    .email-container h4 {
+        font-size: 28px;
+    }
+
+    .inner-text {
+        font-size: 18px;
+        padding: 15px;
+    }
+
+    .amount {
+        font-size: 24px;
+    }
+
+    .btn-custom {
+        font-size: 16px;
+        padding: 10px 16px;
+    }
+}
+
+@media (max-width: 576px) {
+    .email-container {
+        width: 100%;
+        padding: 12px;
+    }
+
+    .email-container h4 {
+        font-size: 24px;
+    }
+
+    .inner-text {
+        font-size: 16px;
+        padding: 12px;
+    }
+
+    .amount {
+        font-size: 22px;
+    }
+
+    .btn-custom {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+
+    .logo {
+        max-width: 200px;
+    }
+}
+
+@media (max-width: 400px) {
+    .email-container h4 {
+        font-size: 22px;
+    }
+
+    .inner-text {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .amount {
+        font-size: 20px;
+    }
+
+    .btn-custom {
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+
+    .logo {
+        max-width: 180px;
+    }
+}
