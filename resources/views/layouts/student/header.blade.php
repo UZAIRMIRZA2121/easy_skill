@@ -223,38 +223,6 @@ box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px">
 
                                 </ul>
                             </li>
-                            <li class="dropdown">
-                                <a class="nav-link" href="#" id="pages_submenu" role="button"
-                                    data-bs-toggle="dropdown" aria-expanded="false">
-                                    Pages
-                                </a>
-                                <ul class="dropdown-menu" aria-labelledby="pages_submenu">
-                                    <li><a href="about.html">About</a></li>
-                                    <li class="dropdown">
-                                        <a class="nav-link" href="#" id="mentors_submenu" role="button"
-                                            data-bs-toggle="dropdown" aria-expanded="false">
-                                            Our Mentors
-                                        </a>
-                                        <ul class="dropdown-menu" aria-labelledby="mentors_submenu">
-                                            <li><a href="mentor.html">Mentors</a></li>
-                                            <li><a href="mentor_details.html">Mentors Details</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="faq.html">F.A.Q.</a></li>
-                                    <li class="dropdown">
-                                        <a class="nav-link" href="#" id="events_submenu" role="button"
-                                            data-bs-toggle="dropdown" aria-expanded="false">
-                                            Our Events
-                                        </a>
-                                        <ul class="dropdown-menu" aria-labelledby="events_submenu">
-                                            <li><a href="event.html">Events</a></li>
-                                            <li><a href="event_details.html">Event Details</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="pricing.html">Pricing</a></li>
-                                    <li><a href="error.html">404 Error</a></li>
-                                </ul>
-                            </li>
                             <li><a class="nav-link" href="{{ route('blog') }}">Blog</a></li>
                             <li><a class="nav-link" href="{{ route('contact.us') }}">Contact</a></li>
                         </ul>
