@@ -11,7 +11,6 @@
 /public/certificate
 /public/course-image
 /public/mail-assets
-/public/packages_image
 /storage/logs
 .env
 .env.backup

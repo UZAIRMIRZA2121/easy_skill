@@ -65,7 +65,7 @@
                             <!--end::Card title-->
                             <!--begin::Action-->
                             <a href="{{ route('users.index') }}"
-                                class="btn btn-sm text-light btn-primary align-self-center">Back</a>
+                                class="btn btn-sm text-light custom-btn align-self-center">Back</a>
                             <!--end::Action-->
                             <!--begin::Card header-->
 

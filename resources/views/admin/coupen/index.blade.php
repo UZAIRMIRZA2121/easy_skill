@@ -49,7 +49,7 @@
                             <!--end::Card title-->
                             <!--begin::Action-->
                             <a href="{{ route('coupons.create') }}"
-                                class="btn btn-sm text-light btn-primary align-self-center">Add Coupen</a>
+                                class="btn btn-sm text-light custom-btn align-self-center">Add Coupen</a>
                             <!--end::Action-->
                         </div>
                         <table id="kt_datatable_dom_positioning"

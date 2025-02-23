@@ -104,7 +104,7 @@
                 
                         <div class="card-header cursor-pointer">
                             <div class="card-title m-0"></div>
-                            <button type="submit" id="save_btn" class="btn btn-sm text-light btn-primary align-self-center mb-5 mt-20">
+                            <button type="submit" id="save_btn" class="btn btn-sm text-light custom-btn align-self-center mb-5 mt-20">
                                 Save
                             </button>
                         </div>

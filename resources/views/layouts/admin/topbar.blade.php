@@ -84,10 +84,10 @@
 
    
                 @if ($unreadCount > 0)
-                    <i class="fa fa-bell " aria-hidden="true" style="font-size: 25px;color: #4a219c;">
+                    <i class="fa fa-bell " aria-hidden="true" style="font-size: 25px;color: #071437;">
                         <span
                             class="badge position-absolute top-0  rounded-circle"
-                            style="font-size: 14px; padding: 3px 7px; background-color: #f46f22; transform: translate(50%, 0%) !important">
+                            style="font-size: 14px; padding: 3px 7px; background-color: #f8b634; transform: translate(50%, 0%) !important">
                             {{ $unreadCount }}
                         </span>
                     </i>

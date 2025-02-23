@@ -36,7 +36,7 @@
                                 <h3 class="fw-bold">Edit Blog</h3>
                             </div>
                             <a href="{{ route('blogs.index') }}"
-                                class="btn btn-sm text-light btn-primary align-self-center">Back</a>
+                                class="btn btn-sm text-light custom-btn align-self-center">Back</a>
                         </div>
 
                         <form class="Blogs_form form w-100" novalidate="novalidate" id="kt_sign_up_form" method="POST"
@@ -104,7 +104,7 @@
                             <div class="card-header cursor-pointer">
                                 <div class="card-title m-0"></div>
                                 <button type="submit" id="save_btn"
-                                    class="btn btn-sm text-light btn-primary align-self-center">Update</button>
+                                    class="btn btn-sm text-light custom-btn align-self-center">Update</button>
                             </div>
                         </form>
                     </div>

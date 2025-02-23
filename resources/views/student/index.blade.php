@@ -143,7 +143,7 @@
 
             <div class="pricing_cards_wrapper row align-items-center">
                 @foreach ($packages as $package)
-              <div class="col col-lg-3">
+              <div class="col col-lg-4">
                
                 <div class="pricing_card text-center {{ $package->id == 2 ? 'bg_dark': '' }}  tilt">
                   <img class="img-fluid" alt=""
@@ -175,7 +175,7 @@
                     </li>
                   </ul>
                   <div class="btn_wrap pb-0">
-                    <a class="btn {{ $package->id == 4 ? 'btn_primary': 'border_dark' }} " href="#!">
+                    <a class="btn {{ $package->id == 2 ? 'btn_primary': 'border_dark' }} " href="#!">
                       <span>
                         <small>Grav Now</small>
                         <small>Grav Now</small>
@@ -2132,31 +2132,7 @@
         </section>
        
   
-
-        <!-- Newslatter Section - Start
-        ================================================== -->
-        <section class="newslatter_section">
-          <div class="container">
-            <div class="newslatter_box" style="background-image: url('assets/images/shape/shape_img_6.svg');">
-              <div class="row justify-content-center">
-                <div class="col col-lg-6">
-                  <div class="section_heading text-center">
-                    <h2 class="heading_text">
-                      Disclaimer :
-                    </h2>
-                    <p class="heading_description mb-0">
-                   
-SkillSider is not responsible for payment made against our products to anyone other than our website or through affiliate link.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <!-- Newslatter Section - End
-        ================================================== -->
-
+       @include('layouts.student.disclaimer') 
       </main>
       <!-- Main Body - End
       ================================================== -->

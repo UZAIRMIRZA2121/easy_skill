@@ -87,7 +87,13 @@ class CourseController extends Controller
      */
     public function show($id)
     {
-
+        // Retrieve the course by its ID
+        $course = Courses::findOrFail($id);
+    
+        $course_videos = Videos::where('courses_id', $id)->get();
+      
+        // Pass the course data to the view
+        return view('student.single-course', compact('course','course_videos'));
     }
 
     /**
@@ -164,12 +170,18 @@ class CourseController extends Controller
     {
         return view('student.free-courses');
     }
+    public function all_courses()
+    {
+        return view('student.all-courses');
+    }
     public function showFreeCourseVideo($id)
     {
+        $all_courses = Courses::inRandomOrder()->limit(3)->get();
+
         $course = Courses::findOrFail($id); // Retrieve the course based on the ID
         if ($course->course_type == 0 || $course->course_type == 2) {
             $all_video = Videos::where('courses_id', $id)->get();
-            return view('student.free-courses-videos', compact('all_video', 'course'));
+            return view('student.free-courses-videos', compact('all_video', 'course','all_courses'));
 
         } else {
             return redirect()->back()->with('error', '');

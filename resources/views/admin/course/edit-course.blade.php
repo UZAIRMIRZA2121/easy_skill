@@ -59,7 +59,7 @@
                             <!--end::Card title-->
                             <!--begin::Action-->
                             <a href="{{ route('courses.index') }}"
-                                class="btn btn-sm text-light btn-primary align-self-center">Back</a>
+                                class="btn btn-sm text-light custom-btn align-self-center">Back</a>
                             <!--end::Action-->
 
                         </div>
@@ -157,7 +157,7 @@
                             <div class="card-header cursor-pointer">
                                 <div class="card-title m-0"></div>
                                 <button type="submit" id="save_btn"
-                                    class="btn btn-sm text-light btn-primary align-self-center">Save</button>
+                                    class="btn btn-sm text-light custom-btn align-self-center">Save</button>
                             </div>
                         </form>
                         

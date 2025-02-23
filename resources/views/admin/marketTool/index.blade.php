@@ -54,7 +54,7 @@
                         <!--end::Card title-->
                         <!--begin::Action-->
                         <a href="{{ route('market_tools.create') }}"
-                            class="btn btn-sm text-light btn-primary align-self-center">Add Market Tool</a>
+                            class="btn btn-sm text-light custom-btn align-self-center">Add Market Tool</a>
                         <!--end::Action-->
 
                     </div>

@@ -52,7 +52,7 @@
                             <!--end::Card title-->
                             <!--begin::Action-->
                             <a href="{{ route('review.create') }}"
-                                class="btn btn-sm text-light btn-primary align-self-center">Add Review</a>
+                                class="btn btn-sm text-light custom-btn align-self-center">Add Review</a>
                             <!--end::Action-->
 
                         </div>

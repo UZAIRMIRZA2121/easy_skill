@@ -53,7 +53,7 @@
                             <!--end::Card title-->
                             <!--begin::Action-->
                             <a href="{{ route('notifications.create') }}"
-                                class="btn btn-sm text-light btn-primary align-self-center">Add Notification</a>
+                                class="btn btn-sm text-light custom-btn align-self-center">Add Notification</a>
                             <!--end::Action-->
 
                         </div>

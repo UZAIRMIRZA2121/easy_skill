@@ -52,7 +52,7 @@
                             <!--end::Card title-->
                             <!--begin::Action-->
                             <a href="{{ route('rank.create') }}"
-                                class="btn btn-sm text-light btn-primary align-self-center">Add Rank</a>
+                                class="btn btn-sm text-light custom-btn align-self-center">Add Rank</a>
                             <!--end::Action-->
 
                         </div>

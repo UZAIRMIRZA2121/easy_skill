@@ -54,12 +54,12 @@
                             @if (Auth::user()->role == 1)
                                 <!--begin::Action-->
                                 <a href="{{ route('earning-rewards.create') }}"
-                                    class="btn btn-sm text-light btn-primary align-self-center">Add Reward</a>
+                                    class="btn btn-sm text-light custom-btn align-self-center">Add Reward</a>
                                 <!--end::Action-->
                             @else
                                 <!--begin::Action-->
                                 <a href="{{ route('claim-rewards.index') }}"
-                                    class="btn btn-sm text-light btn-primary align-self-center">Claimed Rewards</a>
+                                    class="btn btn-sm text-light custom-btn align-self-center">Claimed Rewards</a>
                                 <!--end::Action-->
                             @endif
                         </div>

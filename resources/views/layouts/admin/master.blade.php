@@ -170,14 +170,15 @@
 
         }
 
-        .paginate_button.active,
-        .btn-primary,
-        .active>.page-link {
-            background-color: #50cd89 !important;
-            /* Change background color */
-            color: white !important;
-            /* Change text color */
-        }
+        .custom-btn {
+    background-color: #000 !important; /* Change background color */
+    color: white !important; /* Change text color */
+}
+
+.custom-btn:hover {
+    background-color: #f8b634 !important; /* New background color on hover */
+    color: #000 !important;
+}
     </style>
     <style>
         .whatsapp-button {
@@ -359,7 +360,7 @@
     </script>
     <style>
         .menu-link:hover {
-            background-color: #E0B0FF;
+            background-color: #f8b634;
         }
     </style>
 </head>

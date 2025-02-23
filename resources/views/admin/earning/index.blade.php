@@ -74,11 +74,11 @@
                                 @if ($requested_amount == 0 && $un_paid_amount >= 450 && $currentDate > $requests_date)
                                     <!-- begin::Action -->
                                     <a href="{{ route('earnings.edit', Auth::user()->id) }}"
-                                       class="btn btn-sm text-light btn-primary align-self-center">Withdraw</a>
+                                       class="btn btn-sm text-light custom-btn align-self-center">Withdraw</a>
                                     <!-- end::Action -->
                                 @else
                                 <a 
-                                class="btn btn-sm text-light btn-primary align-self-center"
+                                class="btn btn-sm text-light custom-btn align-self-center"
                                 onclick="showWithdrawError()">Withdraw</a>
                              
                                 @endif

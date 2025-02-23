@@ -61335,7 +61335,7 @@ body {
 }
 
 [data-kt-app-layout=dark-sidebar] .app-sidebar .app-sidebar-logo {
-    border-bottom: 1px dashed #393945
+    /* border-bottom: 1px dashed #393945 */
 }
 
 [data-kt-app-layout=dark-sidebar] .app-sidebar .btn-custom {

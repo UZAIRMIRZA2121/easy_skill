@@ -53,7 +53,7 @@
                             <!--end::Card title-->
                             <!--begin::Action-->
                             <a href="{{ route('students.management.index') }}"
-                                class="btn btn-sm text-light btn-primary align-self-center">Back</a>
+                                class="btn btn-sm text-light custom-btn align-self-center">Back</a>
                             <!--end::Action-->
                         </div>
                         <!--begin::Card header-->

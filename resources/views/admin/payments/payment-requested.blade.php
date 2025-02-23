@@ -128,7 +128,7 @@
                                                     <input type="file" name="image" class="form-control form-control-solid" accept="image/png, image/jpeg, image/jpg" placeholder="">
                                                 </td>
                                                 <td>
-                                                    <button type="submit" id="save_btn" class="btn btn-sm text-light btn-primary align-self-center">Send</button>
+                                                    <button type="submit" id="save_btn" class="btn btn-sm text-light custom-btn align-self-center">Send</button>
                                                 </td>
                                             </form>
                                         </tr>

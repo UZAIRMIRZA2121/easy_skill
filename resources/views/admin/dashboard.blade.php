@@ -1,32 +1,7 @@
 @extends('layouts.admin.master')
 
 @section('admin')
-    <style>
-        .active {
-            background: #574087 !important;
-            color: #fff !important;
-        }
-
-        .noselect {
-            background: #fff;
-            color: #574087;
-        }
-
-        /* Define hover styles for .noselect */
-        .noselect:hover {
-            background: #f8f5ff;
-            /* Change background color on hover */
-            color: inherit;
-            /* Inherit text color from parent */
-        }
-
-        .bordered-img {
-            border-radius: 50%;
-            /* Ensure the image is rounded */
-            border: 2px solid rgb(123, 212, 79);
-            padding: 2px !important;
-        }
-    </style>
+ 
     <!--begin::Content wrapper-->
     <div class="d-flex  flex-column card flex-column-fluid">
         <!--begin::Content-->
@@ -125,9 +100,23 @@ $img = $images[$package->id] ?? 'default.png'; // Fallback to 'default.png' if n
 
                                 #top-box {
                                     height: 100px;
-                                    background-color: #f8f5ff;
                                     border: 3px solid #ead9d775;
                                     border-radius: 10px;
+                                }
+                                .top-box-yellow {
+                                    background-color: #f8b634 !important;
+                                    border: 3px solid #ead9d775;
+                                    border-radius: 10px;
+                                }
+                                .top-box-black {
+                                    background-color: #071437;
+                                   
+                                    border: 3px solid #ead9d775;
+                                    border-radius: 10px;
+                                }
+                                .top-box-black #top-box-heading {
+                                    color: #fff;
+                                   
                                 }
 
                                 #top-inner-box {
@@ -179,7 +168,7 @@ $img = $images[$package->id] ?? 'default.png'; // Fallback to 'default.png' if n
                             @if (Auth::user()->role == 0)
                                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 mt-sm-0 mt-md-2 ">
                                     <div class="card shadow-sm" style="border-radius: 15px;">
-                                        <div id="top-box" class="container overflow-hidden btn-active-light-info">
+                                        <div id="top-box " class="container overflow-hidden  top-box-yellow">
                                             <div class="row gx-5   m-2 " id="top-inner-box">
                                                 <div class="col-8">
                                                     <span class="font-weight-bold text-gray-800"
@@ -187,7 +176,7 @@ $img = $images[$package->id] ?? 'default.png'; // Fallback to 'default.png' if n
                                                     <h1 class="mt-2 gordita-bold counter-value   fw-bold"
                                                         data-kt-countup="true" data-kt-countup-value="{{ $today_earning }}"
                                                         data-kt-countup-prefix="Rs "
-                                                        style="font-weight: 800!important;color: #00CC32;">0
+                                                        style="font-weight: 800!important;color: #071437;">0
                                                     </h1>
                                                 </div>
                                                 <div class="col-4 text-end">
@@ -200,14 +189,14 @@ $img = $images[$package->id] ?? 'default.png'; // Fallback to 'default.png' if n
                                 </div>
                                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
                                     <div class="card shadow-sm" style="border-radius: 15px;">
-                                        <div id="top-box" class="container overflow-hidden">
+                                        <div id="top-box " class="container overflow-hidden top-box-yellow">
                                             <div class="row gx-5  m-2" id="top-inner-box">
                                                 <div class="col-8">
                                                     <span class="text-gray-800 " id="top-box-heading">Last 7 Days</span>
                                                     <h1 class="mt-3 gordita-bold counter-value " data-kt-countup="true"
                                                         data-kt-countup-value="{{ $last7Days_earning }}"
                                                         data-kt-countup-prefix="Rs "
-                                                        style="font-weight: 800;color: #1abae3;">0</h1>
+                                                        style="font-weight: 800;color: #071437;">0</h1>
                                                 </div>
                                                 <div class="col-4 text-end">
                                                     <img src="{{ asset('assets/images/hand.png') }}" class="opacity-25 "
@@ -219,14 +208,14 @@ $img = $images[$package->id] ?? 'default.png'; // Fallback to 'default.png' if n
                                 </div>
                                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
                                     <div class="card shadow-sm" style="border-radius: 15px;">
-                                        <div id="top-box" class="container overflow-hidden">
+                                        <div id="top-box " class="container overflow-hidden top-box-black">
                                             <div class="row gx-5  m-2" id="top-inner-box">
                                                 <div class="col-8">
-                                                    <span class="text-gray-800" id="top-box-heading">Last 30 Days</span>
+                                                    <span class="" id="top-box-heading">Last 30 Days</span>
                                                     <h1 class="mt-2 gordita-bold counter-value " data-kt-countup="true"
                                                         data-kt-countup-value="{{ $last30Days_earning }}"
                                                         data-kt-countup-prefix="Rs "
-                                                        style="font-weight: 800;color: #00CC32;">0</h1>
+                                                        style="font-weight: 800;color: #fff;">0</h1>
                                                 </div>
                                                 <div class="col-4 text-end">
                                                     <img src="{{ asset('assets/images/bar-chart.png') }}"
@@ -238,15 +227,15 @@ $img = $images[$package->id] ?? 'default.png'; // Fallback to 'default.png' if n
                                 </div>
                                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
                                     <div class="card shadow-sm" style="border-radius: 15px;">
-                                        <div id="top-box" class="container overflow-hidden">
+                                        <div id="top-box " class="container overflow-hidden top-box-black">
                                             <div class="row gx-5  m-2" id="top-inner-box">
                                                 <div class="col-8">
-                                                    <span class="   text-gray-800" id="top-box-heading">Total
+                                                    <span class="    " id="top-box-heading">Total
                                                         Earning</span>
                                                     <h1 class="mt-2 gordita-bold counter-value" data-kt-countup="true"
                                                         data-kt-countup-value="{{ $all_time__earning }}"
                                                         data-kt-countup-prefix="Rs "
-                                                        style="font-weight: 800;color: #E0115F;">0</h1>
+                                                        style="font-weight: 800;color: #fff;">0</h1>
                                                 </div>
                                                 <div class="col-4 text-end">
                                                     <img src="{{ asset('assets/images/gift-box.png') }}"

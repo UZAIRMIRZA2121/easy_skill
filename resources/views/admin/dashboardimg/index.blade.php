@@ -52,7 +52,7 @@
                             <!--end::Card title-->
                             <!--begin::Action-->
                             <a href="{{ route('dashboard.images.create')}}"
-                                class="btn btn-sm text-light btn-primary align-self-center">Add Dashboard Image</a>
+                                class="btn btn-sm text-light custom-btn align-self-center">Add Dashboard Image</a>
                             <!--end::Action-->
 
                         </div>

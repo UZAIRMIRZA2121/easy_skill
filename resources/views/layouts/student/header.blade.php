@@ -200,10 +200,11 @@ box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px">
                                     <li><a href="index_2.html">Home V.2</a></li>
                                 </ul>
                             </li>
+                            <li><a class="nav-link" href="{{ route('all.courses') }}">Courses</a></li>
                             <li class="dropdown">
                                 <a class="nav-link" href="#" id="service_submenu" role="button"
                                     data-bs-toggle="dropdown" aria-expanded="false">
-                                    Courses
+                                    Packages
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="service_submenu">
                                     <li class="dropdown">
@@ -225,7 +226,7 @@ box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px">
                                             Educational Bundles
                                         </a>
                                     </li>
-                                    {{-- <li class="dropdown">
+                                   <li class="dropdown">
                                         <a class="nav-link" href="#" id="courses_details_submenu" role="button"
                                             data-bs-toggle="dropdown" aria-expanded="false">
                                             Courses Details
@@ -234,7 +235,7 @@ box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px">
                                             <li><a href="course_details.html">Course Details V.1</a></li>
                                             <li><a href="course_details_2.html">Course Details V.2</a></li>
                                         </ul>
-                                    </li> --}}
+                                    </li>
                                 </ul>
                             </li>
                             <li class="dropdown">

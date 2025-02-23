@@ -60,7 +60,7 @@
                             <!--end::Card title-->
                             <!--begin::Action-->
                             <a href="{{ route('students.management.index') }}"
-                                class="btn btn-sm text-light btn-primary align-self-center">Back</a>
+                                class="btn btn-sm text-light custom-btn align-self-center">Back</a>
                             <!--end::Action-->
                         </div>
                         <!--begin::Card header-->
@@ -162,7 +162,7 @@
                                             <label class="form-label fw-bolder text-dark fs-6" data-bs-toggle="modal"
                                                 data-bs-target="#payment_method_show">Payment method <span
                                                     class="text-danger">*</span></label> <br>
-                                            <input type="button" class="btn btn-lg btn-primary w-100 "
+                                            <input type="button" class="btn  w-100 custom-btn"
                                                 data-bs-toggle="modal" data-bs-target="#payment_method_show"
                                                 value="Payment Method">
                                         </div>
@@ -188,7 +188,7 @@
                                     <!--begin::Actions-->
                                     <div class="text-end pb-5">
 
-                                        <x-button class="btn btn-lg btn-primary w-10" type="submit">
+                                        <x-button class="btn custom-btn w-10" type="submit">
                                            Request Upgrade <i class="fa-solid fa-arrow-right"></i>
                                         </x-button>
                                     </div>

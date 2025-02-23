@@ -52,7 +52,7 @@
                             <!--end::Card title-->
                             <!--begin::Action-->
                             <a href="{{ route('team.create')}}"
-                                class="btn btn-sm text-light btn-primary align-self-center">Add Team</a>
+                                class="btn btn-sm text-light custom-btn align-self-center">Add Team</a>
                             <!--end::Action-->
 
                         </div>

@@ -10,7 +10,7 @@
                 <div class="footer_widget">
                   <div class="site_logo">
                     <a class="site_link" href="index.html">
-                      <img src="{{ asset('studens-asset/assets/images/logo/site_logo_2.svg')}}" alt="Collab - Online Learning Platform">
+                      <img src="{{ asset('studens-asset/assets/images/logo/site_logo_2.png')}}" alt="Collab - Online Learning Platform">
                     </a>
                   </div>
                   <p>

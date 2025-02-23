@@ -58,7 +58,7 @@
                             <!--end::Card title-->
                             <!--begin::Action-->
                             <a href="{{ Auth::user()->role == 1 ? route('payment.admin.create'):  route('payments.create')}}"
-                                class="btn btn-sm text-light btn-primary align-self-center {{$exist ? "d-none" : "" }}">Add Payment</a>
+                                class="btn btn-sm text-light custom-btn align-self-center {{$exist ? "d-none" : "" }}">Add Payment</a>
                             <!--end::Action-->
                         </div>
                         <table id="kt_datatable_dom_positioning"

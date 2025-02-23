@@ -1,7 +1,7 @@
 <!--begin::Sidebar-->
 <div id="kt_app_sidebar" class="app-sidebar flex-column  "
     style=" max-height: 100%;background-color:#ffffff;
-    overflow-y: auto;" data-kt-drawer="true"
+    " data-kt-drawer="true"
     data-kt-drawer-name="app-sidebar" data-kt-drawer-activate="{default: true, lg: false}" data-kt-drawer-overlay="false"
     data-kt-drawer-width="100vw" data-kt-drawer-height="100vh" data-kt-drawer-toggle="#kt_app_sidebar_mobile_toggle">
     <!--begin::Logo-->
@@ -18,68 +18,62 @@
     <div class="app-sidebar-menu overflow-hidden bg-white ">
         <!--begin::Menu wrapper-->
         <div id="kt_app_sidebar_menu_wrapper" style=" max-height: 100%;
-    overflow-y: auto;"
+   "
             class="app-sidebar-wrapper">
+            <style>
+ 
+.dash-profile {
+    position: absolute;
+    content: "";
+    top: 75px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background-image: url('assets/images/profile-bg.png');
+    border-radius: 5px 4px 0 0;
+}
+.profile-bg {
+    position: relative;
+}
+.settings-menu{
+    margin-top: 25px;
+}
+.profile-img img{
+    border-radius: 50%;
+}
+.profile-name a{
+    color: #000;
+}
+            </style>
             <!--begin::Scroll wrapper-->
-            <div class="row mb-0 d-none d-lg-block ">
-                <div class="card-body text-center pt-5">
+            <div class="row mb-5 d-none d-lg-block  " style="height: 200px">
+                <div class="card-body text-center pt-5 profile-background">
                     <div class="d-flex justify-content-center  mx-5">
-                        <!--begin::Section-->
-                        <div class="">
-                            @if (Auth::user()->profile_photo_path)
-                                <img src="{{ asset('profile-image/' . Auth::user()->profile_photo_path) }}"
-                                    class="rounded-circle shadow-4-strong mt-3" width="80px" height="80px"
-                                    alt="user" style="border: 2px solid rgb(123 212 79); padding: 2px;" />
-                            @else
-                                <img src="{{ asset('assets/images/defaultprofile.jpg') }}"
-                                    class=" rounded-3rounded-circle shadow-4-strong" width="90px" height="90px"
-                                    alt="user" style="border: 2px solid #35D7FF; padding: 2px;" />
-                            @endif
-                        </div>
-                        <div class="mt-8 ms-3">
-                            <div class="d-flex justify-content-start gx-10">
-                                <h3>{{ Auth::user()->first_name }} {{ Auth::user()->last_name }}</h3>
+                        <div class="settings-widget dash-profile">
+                            <div class="settings-menu">
+                                <div class="profile-bg">
+                                    <div class="profile-img">
+                                        <a href=""><img
+                                                src="https://myrozgar.pk/main-files/user-images/MyRozgar-Zeeshan Rozgar's-Profile Pic-1264d2f9b87223c0798e2adc1059dd4f.jpg"
+                                                alt="Img" width="140" style="border: 2px solid #000; padding: 2px;"></a>
+                                    </div>
+                                </div>
+                                <div class="profile-group mt-2">
+                                    <div class="profile-name text-center">
+                                        <h4><a href="">Zeeshan Hameed</a></h4>
+                                        <p class="badge text-white"     style="background-color:{{ $package->color_code }}; color: {{ $package->text_color_code }}; line-height: 1; border-radius: 10px 1px 10px 1px; 
+                                    border-bottom: 3px solid rgba(0, 0, 0, 0.3); border-right: 3px solid rgba(0, 0, 0, 0.3);">MyRozgar Pro</p>
+                                    </div>
+                                </div>
                             </div>
-                            @if (Auth::user()->role == 0)
-                                <div class="d-flex justify-content-start gx-10">
-                                    @php
-                                        // Define images for each package
-                                        $images = [
-                                            1 => 'verified_skill_sider.png',
-                                            2 => 'employee_of_the_month_skill_sider.png',
-                                            3 => 'best_seller_pro_skill_sider.png',
-                                            4 => 'diamond_skill_sider.png',
-                                        ];
-                                        $package = Auth::user()->package; // Get the user's package
-$img = $images[$package->id] ?? 'default.png'; // Fallback to 'default.png' if no image is found
-                                    @endphp
-                                    @if ($package)
-                                        <span class="badge badge-lg d-flex align-items-center"
-                                            style="background-color:{{ $package->color_code }}; color: {{ $package->text_color_code }}; line-height: 1; border-radius: 10px 1px 10px 1px; 
-                                    border-bottom: 3px solid rgba(0, 0, 0, 0.3); border-right: 3px solid rgba(0, 0, 0, 0.3);">
-                                            {{-- <img src="{{ asset('sidebaricon/' . $img) }}" alt="" class="me-1" width="20px"> --}}
-                                            {{ $package->package_title }}
-                                        </span>
-                                    @endif
-                                </div>
-                            @else
-                                <div class="d-flex justify-content-start gx-10">
-                                    @if (Auth::user()->role == 2)
-                                        <span class="badge badge-lg badge-success">Order Admin</span>
-                                    @elseif(Auth::user()->role == 3)
-                                        <span class="badge badge-lg badge-success">Analytic Admin</span>
-                                    @elseif(Auth::user()->role == 4)
-                                        <span class="badge badge-lg badge-success">Withdraw Admin</span>
-                                    @else
-                                        <span class="badge badge-lg badge-success">Super Admin</span>
-                                    @endif
-                                </div>
-                            @endif
                         </div>
+                        <!--begin::Section-->
                     </div>
                     <!--end::Section-->
                 </div>
             </div>
+
+            <hr class="text-dark " style="margin-top: 50px">
             <div id="kt_app_sidebar_menu_scroll" class="my-5 mx-3" style="max-height: 100%; overflow-y: auto;"
                 data-kt-scroll="true" data-kt-scroll-activate="true" data-kt-scroll-height="700px"
                 data-kt-scroll-dependencies="#kt_app_sidebar_logo, #kt_app_sidebar_footer"
@@ -87,7 +81,7 @@ $img = $images[$package->id] ?? 'default.png'; // Fallback to 'default.png' if n
                 data-kt-scroll-save-state="true">
                 <!--begin::Menu-->
                 <div class="menu menu-column menu-rounded menu-sub-indention fw-semibold fs-6" id="#kt_app_sidebar_menu"
-                    data-kt-menu="true" data-kt-menu-expand="false">
+                    data-kt-menu="true" data-kt-menu-expand="false" style="margin-bottom: 50px;">
                     <div class="menu-item ">
                         <!--begin::Menu-->
                         <div class="menu menu-column menu-rounded menu-sub-indention fw-semibold fs-6"
@@ -555,7 +549,8 @@ $img = $images[$package->id] ?? 'default.png'; // Fallback to 'default.png' if n
                                     </a>
 
 
-                                    <a href="{{ Auth::user()->role == 1 ? route('users.index') : route('student-profile.index') }}">
+                                    <a
+                                        href="{{ Auth::user()->role == 1 ? route('users.index') : route('student-profile.index') }}">
                                         <span class="menu-link">
                                             <span class="menu-icon">
                                                 <img src="{{ asset('sidebaricon/user.png') }}" alt=""
@@ -573,11 +568,11 @@ $img = $images[$package->id] ?? 'default.png'; // Fallback to 'default.png' if n
                                             <span class="menu-title">FAQs</span>
                                         </span>
                                     </a>
-                                 
+
                                     <a>
                                         <form method="POST" action="{{ route('logout') }}">
                                             @csrf
-                                            <button class="btn btn-danger py-2 px-4 ms-4 mt-3" type="submit"><i
+                                            <button class="btn  py-2 px-4 ms-4 mt-3 btn-dark" type="submit"><i
                                                     class="fa fa-power-off" aria-hidden="true"></i> Logout</button>
                                         </form>
                                     </a>

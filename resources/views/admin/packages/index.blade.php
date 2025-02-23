@@ -53,7 +53,7 @@
                             <!--end::Card title-->
                             <!--begin::Action-->
                             <a href="{{ route('packages.create') }}"
-                                class="btn btn-sm text-light btn-primary align-self-center">Add Package</a>
+                                class="btn btn-sm text-light custom-btn align-self-center">Add Package</a>
                             <!--end::Action-->
 
                         </div>

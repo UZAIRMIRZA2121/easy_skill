@@ -62,7 +62,7 @@
                             <!--end::Card title-->
                             <!--begin::Action-->
                             <a href="{{ Auth::user()->role == 1 ? route('payment.admin.index') : route('student.payments') }}"
-                                class="btn btn-sm text-light btn-primary align-self-center">Back</a>
+                                class="btn btn-sm text-light custom-btn align-self-center">Back</a>
                              
 
 
@@ -128,7 +128,7 @@
                                 <div class="card-header cursor-pointer">
                                     <div class="card-title m-0"></div>
                                     <button type="submit" id="save_btn"
-                                        class="btn btn-sm text-light btn-primary align-self-center mb-5 mt-20">Save</button>
+                                        class="btn btn-sm text-light custom-btn align-self-center mb-5 mt-20">Save</button>
                                 </div>
                             </form>
                         </div>

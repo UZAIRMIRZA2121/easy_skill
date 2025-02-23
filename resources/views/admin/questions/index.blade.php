@@ -53,7 +53,7 @@
                             <!--end::Card title-->
                             <!--begin::Action-->
                             <a href="{{ route('questions.create') }}"
-                                class="btn btn-sm text-light btn-primary align-self-center">Add Questions</a>
+                                class="btn btn-sm text-light custom-btn align-self-center">Add Questions</a>
                             <!--end::Action-->
 
                         </div>

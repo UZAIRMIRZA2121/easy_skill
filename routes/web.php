@@ -129,9 +129,12 @@ Route::get('/about-us', [UserController::class, 'std_about_us'])->name('about.us
 Route::get('/blog', [UserController::class, 'std_blog'])->name('blog');
 Route::get('/single-blog', [UserController::class, 'show'])->name('single.blog');
 Route::get('/free-courses', [CourseController::class, 'free_courses'])->name('free.courses');
+Route::get('/courses', [CourseController::class, 'all_courses'])->name('all.courses');
+Route::get('/single-course-details/{id}', [CourseController::class, 'show'])->name('single.course.details');
+
 Route::get('/free-course-video/{id}', [CourseController::class, 'showFreeCourseVideo'])->name('free.course.video');
 Route::get('/Legal-proofs', [UserController::class, 'Legal_proof'])->name('Legal.proofs');
-Route::get('/courses', [UserController::class, 'premium_course'])->name('premium.course');
+Route::get('/coursessss', [UserController::class, 'premium_course'])->name('premium.course');
 
 Route::get('/blog/{title}', [BlogController::class, 'show'])->name('blog.show');
 // web.php (routes file)

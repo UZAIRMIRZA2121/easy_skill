@@ -52,7 +52,7 @@
                             <!--end::Card title-->
                             <!--begin::Action-->
                             <a href="{{ route('blogs.create') }}"
-                                class="btn btn-sm text-light btn-primary align-self-center">Add Blog</a>
+                                class="btn btn-sm text-light custom-btn align-self-center">Add Blog</a>
                             <!--end::Action-->
                            
                         </div>
