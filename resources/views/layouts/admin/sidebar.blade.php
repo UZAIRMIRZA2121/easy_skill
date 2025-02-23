@@ -45,6 +45,7 @@
     color: #000;
 }
             </style>
+              @if (Auth::user()->role == 0)
             <!--begin::Scroll wrapper-->
             <div class="row mb-5 d-none d-lg-block  " style="height: 200px">
                 <div class="card-body text-center pt-5 profile-background">
@@ -72,7 +73,7 @@
                     <!--end::Section-->
                 </div>
             </div>
-
+            @endif
             <hr class="text-dark " style="margin-top: 50px">
             <div id="kt_app_sidebar_menu_scroll" class="my-5 mx-3" style="max-height: 100%; overflow-y: auto;"
                 data-kt-scroll="true" data-kt-scroll-activate="true" data-kt-scroll-height="700px"
