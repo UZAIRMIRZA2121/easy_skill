@@ -228,7 +228,7 @@
 
                                 <!-- Begin::Actions -->
                                 <div class="text-center">
-                                    <button id="butsave" class="btn btn-primary my-5" style="float: right;"
+                                    <button id="butsave" class="btn custom-btn my-5" style="float: right;"
                                         type="submit">
                                         {{ __('Update ') }}
                                     </button>

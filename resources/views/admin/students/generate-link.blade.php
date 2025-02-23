@@ -42,7 +42,7 @@
             <!--begin::Content container-->
             <div id="kt_app_content_container" class="app-container container-xxl">
                 <div class="card  mb-2">
-                    <div class="card-header cursor-pointer w-100 text-center">
+                    <div class="card-header cursor-pointer w-100 text-center yello-gradient-row">
                         <h1 class="d-block m-auto"> <span> 
                              <span class="menu-icon">
                             <i class="fas fa-link"></i>
@@ -79,7 +79,7 @@
                             <div class="col-md-4   ">
                                 <div class="form-group">
                                     <label class="form-label"></label>
-                                    <button class="btn btn-primary w-100 " onclick="copyPaymentLink()">Copy Payment Link</button>
+                                    <button class="btn custom-btn w-100 " onclick="copyPaymentLink()">Copy Payment Link</button>
                                 </div>
                             </div>
                         </div>
@@ -94,7 +94,7 @@
                             <div class="col-md-4 ">
                                 <div class="form-group">
                                     <label class="form-label"></label>
-                                    <button class="btn btn-primary w-100" onclick="copyReferralCode()">Copy Referral Code</button>
+                                    <button class="btn custom-btn w-100" onclick="copyReferralCode()">Copy Referral Code</button>
                                 </div>
                             </div>
                         </div>
@@ -122,7 +122,7 @@
                             <div class="col-md-4 ">
                                 <div class="form-group">
                                     <label for="packageInput" class="form-label"></label>
-                                    <button class="btn btn-primary w-100 " onclick="copyLink()">Copy Referral Link</button>
+                                    <button class="btn custom-btn w-100 " onclick="copyLink()">Copy Referral Link</button>
                                 </div>
                             </div>
                         </div>
@@ -141,7 +141,7 @@
                             <div class="col-md-4 ">
                                 <div class="form-group">
                                     <label class="form-label"></label>
-                                    <button class="btn btn-primary w-100" onclick="copyCommunityLink()">Copy Community Links</button>
+                                    <button class="btn custom-btn w-100" onclick="copyCommunityLink()">Copy Community Links</button>
                                 </div>
                             </div>
                         </div>

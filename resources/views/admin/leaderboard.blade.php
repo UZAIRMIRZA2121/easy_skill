@@ -29,18 +29,22 @@
 {{--</style>--}}
 
 <style>
-    .t_heade{
-        background-color :#4d3185;
-    }
+ .t_heade {
+    background-color: #000; /* Replace with your desired colors */
+}
+.t_heade_row {
+    /* background: linear-gradient(45deg, #f8b634, #fff); */
+}
+
 </style>
     <!--begin::Content wrapper-->
     <div class="d-flex flex-column flex-column-fluid">
         <!--begin::Toolbar-->
-        <div id="kt_app_toolbar" class="app-toolbar py-3 py-lg-6">
+        <div id="kt_app_toolbar" class="app-toolbar py-3 py-lg-6 ">
             <!--begin::Toolbar container-->
             <div id="kt_app_toolbar_container" class="app-container container-xxl d-flex flex-stack">
                 <!--begin::Page title-->
-                <div class="page-title d-flex flex-column justify-content-center flex-wrap me-3">
+                <div class="page-title d-flex flex-column justify-content-center flex-wrap me-3 ">
                     <!--begin::Title-->
                 
                     <!--end::Title-->
@@ -48,10 +52,7 @@
                     <ul class="breadcrumb breadcrumb-separatorless fw-semibold fs-7 my-0 pt-1 d-none">
                         <!--begin::Item-->
                         <li class="breadcrumb-item text-muted">
-                            <a href="#" class="text-muted text-hover-primary">Dashboard
-
-
-                            </a>
+                            <a href="#" class="text-muted text-hover-primary">Dashboard</a>
                         </li>
                         <!--end::Item-->
                         <!--begin::Item-->
@@ -77,8 +78,8 @@
             <!--begin::Content container-->
             <div id="kt_app_content_container" class="app-container container-xxl">
                 <div class="card  mb-2">
-                    <div class=" ">
-                        <div class="card-header cursor-pointer w-100 text-center">
+                    <div class="  ">
+                        <div class="card-header cursor-pointer w-100 text-center yello-gradient-row ">
                             <h1 class="d-block m-auto"> <span> <img src="{{ asset('sidebaricon/award-badge.png') }}" alt=""
                                         width="30px" class="mx-3 mb-3">LeaderBoard</span></h1>
                         </div>
@@ -114,7 +115,7 @@
                                                                             <th class="sorting_disabled text-light" tabindex="0"
                                                                                 aria-controls="example1" rowspan="1"
                                                                                 colspan="1" style="width: 75px;
-                                                                                aria-label=" Name: activate to sort column ascending"> Profile</th>
+                                                                                aria-label="Name: activate to sort column ascending"> Profile</th>
                                                                             <th class="sorting_disabled text-light" tabindex="0"
                                                                                 aria-controls="example1" rowspan="1"
                                                                                 colspan="1"
@@ -130,7 +131,7 @@
                                                                         </thead>
                                                                         <tbody id="inner1">
                                                                             @foreach ($topEarnings_7_days as $earning)
-                                                                                <tr role="row" class="">
+                                                                                <tr role="row" class="t_heade_row">
                                                                                     <td class="" tabindex="0">
                                                                                         @if ($earning->user->profile_photo_path)
                                                                                             <img src="{{ asset('profile-image/'.$earning->user->profile_photo_path) }}"
@@ -189,7 +190,7 @@
                                                                            class="table  table-bordered  no-footer dtr-inline table-striped"
                                                                            role="grid" aria-describedby="example3_info">
                                                                         <thead class="t_heade ">
-                                                                        <tr role="row">
+                                                                        <tr role="row" >
 
                                                                               <th class="sorting_disabled text-light" tabindex="0"
                                                                                 aria-controls="example1" rowspan="1"
@@ -211,7 +212,7 @@
                                                                         <tbody id="inner1">
                                                                           
                                                                             @foreach ($topEarnings_30_days as $earning)
-                                                                                <tr role="row" class="">
+                                                                                <tr role="row" class="t_heade_row">
                                                                                     <td class="" tabindex="0">
                                                                                         @if ($earning->user->profile_photo_path)
                                                                                             <img src="{{ asset('profile-image/'.$earning->user->profile_photo_path) }}"
@@ -292,7 +293,7 @@
                                                                         </thead>
                                                                         <tbody id="inner1">
                                                                             @foreach ($topEarnings_AllTime as $earning)
-                                                                                <tr role="row" class="">
+                                                                                <tr role="row" class="t_heade_row">
                                                                                     <td class="" tabindex="0">
                                                                                         @if ($earning->user->profile_photo_path)
                                                                                             <img src="{{ asset('profile-image/'.$earning->user->profile_photo_path) }}"

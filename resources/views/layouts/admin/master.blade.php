@@ -64,6 +64,7 @@
             .menu-icon i {
                 font-size: 18px !important;
             }
+          
         }
 
         #app {
@@ -169,8 +170,17 @@
 
 
         }
+         .page-link {
+    background-color: #000 !important; /* Change background color */
+    color: white !important; /* Change text color */
+}
+.active>.page-link {
+    background-color: #f8b634 !important; /* New background color on hover */
+    color: #000 !important;
+}
 
-        .custom-btn {
+
+        .custom-btn  {
     background-color: #000 !important; /* Change background color */
     color: white !important; /* Change text color */
 }
@@ -284,10 +294,19 @@
             height: 280px;
             width: 100%;
         }
+        .app-sidebar-logo-default{
+                width: 100%;
+                height: 50px;
+              
+            }
 
         @media(max-width:425px) {
             .embed-responsive-item {
                 height: 232px;
+            }
+            .app-sidebar-logo-default{
+                width: 75%;
+                margin: 9px 0px;
             }
         }
 
@@ -302,6 +321,23 @@
                 height: 172px;
             }
         }
+    </style>
+
+    <style>
+               .custom-btn {
+    background-color: #000 !important; /* Change background color */
+    color: white !important; /* Change text color */
+}
+
+.custom-btn:hover {
+    background: linear-gradient(90deg, #fff 0%, #f8b634 50%, #fff 100%);
+    color: #000 !important;
+}
+
+.yello-gradient-row {
+    background: linear-gradient(90deg, #fff 0%, #f8b634 50%, #fff 100%);
+}
+
     </style>
 
 

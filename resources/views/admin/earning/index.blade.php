@@ -52,7 +52,7 @@
             <div id="kt_app_content_container" class="app-container container-xxl">
                 <div class="card  mb-2">
                     <div class=" ">
-                        <div class="card-header cursor-pointer w-100 text-center">
+                        <div class="card-header cursor-pointer w-100 text-center yello-gradient-row">
                             <h1 class="d-block m-auto"> <span> <img src="{{ asset('sidebaricon/money-withdraw.png') }}" alt=""
                                         width="30px" class="mx-3 ">Withdrawals</span></h1>
                             

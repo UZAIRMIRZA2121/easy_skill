@@ -175,7 +175,7 @@
                     </li>
                   </ul>
                   <div class="btn_wrap pb-0">
-                    <a class="btn {{ $package->id == 2 ? 'btn_primary': 'border_dark' }} " href="#!">
+                    <a class="btn {{ $package->id == 2 ? 'btn_primary': 'border_dark' }} " href="{{ route('single.package', ['id' => $package->id]) }}">
                       <span>
                         <small>Grav Now</small>
                         <small>Grav Now</small>

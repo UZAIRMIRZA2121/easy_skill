@@ -11,7 +11,7 @@
                 <div class="page-title d-flex flex-column justify-content-center flex-wrap me-3">
                    
                     <!--begin::Title-->
-                    <h1 class="page-heading d-flex text-dark fw-bold fs-3 flex-column justify-content-center my-0">Earning</h1>
+                    {{-- <h1 class="page-heading d-flex text-dark fw-bold fs-3 flex-column justify-content-center my-0">Earning</h1> --}}
                     <!--end::Title-->
                     <!--begin::Breadcrumb-->
                     <ul class="breadcrumb breadcrumb-separatorless fw-semibold fs-7 my-0 pt-1 d-none">
@@ -27,7 +27,7 @@
                         </li>
                         <!--end::Item-->
                         <!--begin::Item-->
-                        <li class="breadcrumb-item text-muted">Earning</li>
+                        {{-- <li class="breadcrumb-item text-muted">Earning</li> --}}
                         <!--end::Item-->
                         <!--begin::Item-->
                         <li class="breadcrumb-item">
@@ -65,7 +65,16 @@
                             <!--end::Action-->
 
                         </div>
-
+                        <style>
+                            .yellow-box{
+                                background-color: #f8b634;
+                                color: #000
+                            }
+                            .black-box{
+                                background-color: #000;
+                                color: #fff
+                            }
+                        </style>
                         <div>
                             <form class="Course_form form w-100  " novalidate="novalidate" id="kt_sign_up_form"
                                 method="POST" enctype="multipart/form-data"
@@ -75,16 +84,16 @@
                                 @method('PUT')
                                 <div class="row  pt-6">
                                     <!--payment method start-->
-                                    <div class="col-lg-6 col-sm-12">
+                                    <div class="col-lg-3 col-sm-12">
                                         <div class="mb-10">
                                             <!--begin::Col-->
                                             <!--begin::Card widget 11-->
-                                            <div class="card card-flush h-xl-80" style="background-color: #f8f5ff">
+                                            <div class="card card-flush h-xl-80 yellow-box" >
                                                 <!--begin::Body-->
                                                 <div class="card-body text-center pt-5">
                                                     <div class="d-flex justify-content-center  btn-active-light-success">
                                                         <div>
-                                                            <span class="d-block   h4  text-gray-800">Account Name </span>
+                                                            <span class="d-block   h4  ">Account Name </span>
                                                             <div class="fs-2 fw-bolder mt-4">{{$payment_method->account_name}} </div>
                                                             
                                                              <input type="hidden"  name="payment_method_id" value="{{$payment_method->id}}">
@@ -103,16 +112,16 @@
                                     </div>
                                     <!--payment method end-->
                                     
-                                    <div class="col-lg-6 col-sm-12">
+                                    <div class="col-lg-3 col-sm-12">
                                         <div class="mb-10">
                                             <!--begin::Col-->
                                             <!--begin::Card widget 11-->
-                                            <div class="card card-flush h-xl-80" style="background-color: #f8f5ff">
+                                            <div class="card card-flush h-xl-80 yellow-box" >
                                                 <!--begin::Body-->
                                                 <div class="card-body text-center pt-5">
                                                     <div class="d-flex justify-content-center ">
                                                         <div>
-                                                            <span class="d-block   h4  text-gray-800">Requesting Amount</span>
+                                                            <span class="d-block   h4  ">Requesting Amount</span>
                                                             <div class="fs-2 fw-bolder mt-4" data-kt-countup="true"
                                                                 data-kt-countup-value="{{ $earnings }}"
                                                                 data-kt-countup-prefix="Rs ">0</div>
@@ -129,16 +138,16 @@
                                             <!--end::Card widget 11-->
                                         </div>
                                     </div>
-                                    <div class="col-lg-6 col-sm-12">
+                                    <div class="col-lg-3 col-sm-12">
                                         <div class="mb-10">
                                             <!--begin::Col-->
                                             <!--begin::Card widget 11-->
-                                            <div class="card card-flush h-xl-80" style="background-color: #f8f5ff">
+                                            <div class="card card-flush h-xl-80 black-box" >
                                                 <!--begin::Body-->
                                                 <div class="card-body text-center pt-5">
                                                     <div class="d-flex justify-content-center  btn-active-light-success">
                                                         <div>
-                                                            <span class="d-block   h4  text-gray-800">Account Number </span>
+                                                            <span class="d-block   h4  text-light ">Account Number </span>
                                                             <div class="fs-2 fw-bolder mt-4">{{$payment_method->account_number}} </div>
                                                             
                                                              <input type="hidden"  name="payment_method_id" value="{{$payment_method->id}}">
@@ -155,19 +164,17 @@
                                             <!--end::Card widget 11-->
                                         </div>
                                     </div>
-                                    <div class="col-lg-6 col-sm-12">
-                                     
-                                    </div>
-                                    <div class="col-lg-6 col-sm-12">
+                                 
+                                    <div class="col-lg-3 col-sm-12">
                                         <div class="mb-10">
                                             <!--begin::Col-->
                                             <!--begin::Card widget 11-->
-                                            <div class="card card-flush h-xl-80" style="background-color: #f8f5ff">
+                                            <div class="card card-flush h-xl-80 black-box" >
                                                 <!--begin::Body-->
                                                 <div class="card-body text-center pt-5">
                                                     <div class="d-flex justify-content-center  btn-active-light-success">
                                                         <div>
-                                                            <span class="d-block   h4  text-gray-800">Bank Name </span>
+                                                            <span class="d-block   h4 text-light ">Bank Name </span>
                                                             <div class="fs-2 fw-bolder mt-4">{{$payment_method->bank}} </div>
                                                             
                                                              <input type="hidden"  name="payment_method_id" value="{{$payment_method->id}}">

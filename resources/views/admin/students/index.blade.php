@@ -57,7 +57,7 @@
             <div id="kt_app_content_container" class="app-container container-xxl">
                 <div class="card  mb-2">
                     <div class=" ">
-                        <div class="card-header cursor-pointer w-100 text-center">
+                        <div class="card-header cursor-pointer w-100 text-center yello-gradient-row">
                             <h1 class="d-block m-auto"> <span> <img src="{{ asset('sidebaricon/team.png') }}" alt=""
                                         width="30px" class="mx-3 mb-3">My Affiliates</span></h1>
                         </div>
@@ -131,7 +131,7 @@
                                                     placeholder="Search name or email or refrrral code">
                                             </div>
                                             <div class="col-lg-2 col-sm-12 d-flex">
-                                                <button type="submit" class="btn btn-primary my-1  w-100">Search</button>
+                                                <button type="submit" class="btn custom-btn my-1  w-100">Search</button>
 
                                             </div>
                                         </div>
@@ -198,7 +198,7 @@
                                             </td>
                                             <td class="text-uppercase">
                                                 <span class="badge badge-lg"
-                                                    style="background-color:  {{ $student->package->color_code }}; color: {{ $student->package->text_color_code }};">{{ $student->package->package_title }}</span>
+                                                    style="background-color:  {{ $student->package->color_code ?? '' }}; color: {{ $student->package->text_color_code ?? '' }};">{{ $student->package->package_title ?? '' }}</span>
 
                                             </td>
 
@@ -229,7 +229,7 @@
 
 
                                                     <span class="badge badge-lg"
-                                                        style="background-color:  {{ $student->package->color_code }}; color: {{ $student->package->text_color_code }};">
+                                                        style="background-color:  {{ $student->package->color_code ?? '' }}; color: {{ $student->package->text_color_code ?? '' }};">
                                                         {{ $student->referral_code }}</span>
 
                                                 </td>

@@ -182,7 +182,7 @@
 
         <a href="{{ route('dashboard') }}" class="text-dark">
             <img alt="Logo" src="{{ asset('assets/images/skillsider_logo.png') }}"
-                class="h-50px app-sidebar-logo-default ms-5 mt-3" />
+                class=" app-sidebar-logo-default ms-5 mt-3" />
         </a>
     </div>
     <div class="d-block d-lg-none d-flex align-items-center justify-content-end m-auto me-5" title="Show sidebar menu">
@@ -209,15 +209,15 @@
                 @endphp
 
                 @if ($unreadCount > 0)
-                    <i class="fa fa-bell " aria-hidden="true" style="font-size: 25px; color: #4a219c;">
+                    <i class="fa fa-bell " aria-hidden="true" style="font-size: 25px; color: #000;">
                         <span
                             class="badge position-absolute top-0 start-50 translate-middle-x rounded-circle"
-                            style="font-size: 14px; padding: 3px 7px; background-color: #f46f22; transform: translate(-15%, 15%) !important">
+                            style="font-size: 14px; padding: 3px 7px; background-color: #f8b634; transform: translate(-15%, 15%) !important">
                             {{ $unreadCount }}
                         </span>
                     </i>
                 @else
-                    <i class="fa fa-bell " aria-hidden="true" style="font-size: 25px; color: #4a219c;"></i>
+                    <i class="fa fa-bell " aria-hidden="true" style="font-size: 25px; color: #000;"></i>
                 @endif
             </a>
 
@@ -301,7 +301,7 @@
     @endif
 
         <div class="btn btn-icon btn-active-color-primary w-30px h-30px" id="kt_app_sidebar_mobile_toggle">
-            <ion-icon class="icon-mobile-nav" id="bar-icon" name="menu" style=" color: #f5772e !important;">
+            <ion-icon class="icon-mobile-nav" id="bar-icon" name="menu" style=" color: #000 !important;">
             </ion-icon>
         </div>
     </div>

@@ -42,7 +42,7 @@
             <!--begin::Content container-->
             <div id="kt_app_content_container" class="app-container container-xxl">
                 <div class="card  mb-2">
-                    <div class="card-header cursor-pointer w-100 text-center">
+                    <div class="card-header cursor-pointer w-100 text-center yello-gradient-row">
                         <h1 class="d-block m-auto"> <span> <img src="{{ asset('sidebaricon/certificate.png') }}" alt=""
                                     width="30px" class="mx-3 mb-3">Certificates</span></h1>
                         
@@ -77,7 +77,7 @@
                                 </div>
 
                                 <div class="col-md-3 mt-3 d-flex justify-content-start align-items-center">
-                                    <button type="submit" class="btn btn-success disabled" disabled>Start Test <i
+                                    <button type="submit" class="btn custom-btn disabled" disabled>Start Test <i
                                             class="fa-solid fa-arrow-right  " aria-hidden="true"></i></button>
                                 </div>
                             </div>
@@ -105,7 +105,7 @@
                                             @endif
                                         </td>
                                         <td>
-                                            <a href="{{ route('test.review', $test->id) }}" class="btn btn-sm btn-primary">
+                                            <a href="{{ route('test.review', $test->id) }}" class="btn btn-sm custom-btn">
                                                 View Result
                                             </a>
                                         </td>
@@ -123,7 +123,7 @@
                                             @else
                                                 <div class="d-flex justify-content-start">
                                                     <a href="{{ route('download.certificate', ['course_id' => $test->course_id]) }}"
-                                                        class="btn btn-sm btn-primary" style="float: right;">
+                                                        class="btn btn-sm custom-btn" style="float: right;">
                                                         Download Certificate
                                                     </a>
 

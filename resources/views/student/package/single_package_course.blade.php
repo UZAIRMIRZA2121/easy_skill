@@ -259,7 +259,7 @@
         <!--begin::Toolbar-->
 
         <div class="container package_container  ">
-            <div class="alert-warning text-center my-2 ">
+            <div class="alert-warning text-center my-2 yello-gradient-row ">
                 @if(Auth::user()->package_id < 4)
                 <h2 class="p-2">Hurry up: The clock is ticking! Upgrade to SKILLSIDER PRIME.</h2>
                 @else
@@ -374,13 +374,13 @@
                     <div class="modal-dialog modal-dialog-centered">
                         <div class="modal-content">
                             <div class="modal-header  bg-danger ">
-                                <h5 class="modal-title text-light" id="exampleModalLabel"
+                                <h5 class="modal-title text-light " id="exampleModalLabel"
                                     style="
                                             font-weight: 1000;
                                             font-size: 20px;">
                                     <b>Must Watch This Video</b>
                                 </h5>
-                                <button type="button" class="btn-close fs-3 " data-bs-dismiss="modal"
+                                <button type="button" class="btn-close fs-3 text-light" data-bs-dismiss="modal"
                                     aria-label="Close"></button>
                             </div>
                             <div class="modal-body bg-dark p-0">

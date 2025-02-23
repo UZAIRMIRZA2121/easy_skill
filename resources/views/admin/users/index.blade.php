@@ -126,7 +126,7 @@
             <!--begin::Content container-->
             <div id="kt_app_content_container" class="app-container container-xxl">
                 <div class="card  mb-2">
-                    <div class="card-header cursor-pointer w-100 text-center">
+                    <div class="card-header cursor-pointer w-100 text-center yello-gradient-row">
                         <h1 class="d-block m-auto"> <span> <img src="{{ asset('sidebaricon/user.png') }}" alt=""
                                     width="30px" class="mx-3 mb-3">Profile Settings</span></h1>
                         
@@ -566,13 +566,13 @@
                                                     <div class="btn mb-5">
                                                         @if (Auth::user()->role == 1)
                                                             <a href="{{ route('admin.edit.profile', ['user' => Auth::user()->id]) }}"
-                                                                type="button" id="butsave" class="btn btn-primary"
+                                                                type="button" id="butsave" class="btn custom-btn"
                                                                 style="float: right;">
                                                                 Edit Profile
                                                             </a>
                                                         @elseif(Auth::user()->role == 0)
                                                             <a href="{{ route('users.edit', ['user' => Auth::user()->id]) }}"
-                                                                type="button" id="butsave" class="btn btn-primary"
+                                                                type="button" id="butsave" class="btn custom-btn"
                                                                 style="float: right;">
                                                                 Edit
                                                             </a>
@@ -660,7 +660,7 @@
                                                 </div>
 
                                                 <!--end::Input group-->
-                                                <x-button id="butsave" class="btn btn-primary my-5"
+                                                <x-button id="butsave" class="btn custom-btn my-5"
                                                     style="float: right;" type="submit">
                                                     {{ __('Update password') }}
                                                 </x-button>

@@ -169,7 +169,10 @@ box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px">
 
 
 
+@php 
+    $all_packages = App\Models\Packages::all();
 
+@endphp
 
 
 
@@ -181,7 +184,7 @@ box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px">
         <div class="row align-items-center">
             <div class="col col-lg-3 col-5">
                 <div class="site_logo">
-                    <a class="site_link" href="index.html">
+                    <a class="site_link" href="{{ route('home.page') }}">
                         <img src="{{ asset('studens-asset/assets/images/logo/mian-logo.webp') }}"
                             alt="Collab - Online Learning Platform" width="245">
                     </a>
@@ -192,14 +195,15 @@ box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px">
                     <div class="main_menu_inner collapse navbar-collapse justify-content-center"
                         id="main_menu_dropdown">
                         <ul class="main_menu_list unordered_list_center">
-                            <li class="dropdown active">
+                            {{-- <li class="dropdown active">
                                 <a class="nav-link" href="#" id="home_submenu" role="button"
                                     data-bs-toggle="dropdown" aria-expanded="false">Home</a>
                                 <ul class="dropdown-menu" aria-labelledby="home_submenu">
                                     <li class="active"><a href="index.html">Home V.1</a></li>
                                     <li><a href="index_2.html">Home V.2</a></li>
                                 </ul>
-                            </li>
+                            </li> --}}
+                            <li><a class="nav-link active" href="{{ route('home.page') }}">Home</a></li>
                             <li><a class="nav-link" href="{{ route('all.courses') }}">Courses</a></li>
                             <li class="dropdown">
                                 <a class="nav-link" href="#" id="service_submenu" role="button"
@@ -207,35 +211,16 @@ box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px">
                                     Packages
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="service_submenu">
+                                    @foreach ($all_packages as $package)
                                     <li class="dropdown">
-                                        <a class="nav-link" href="{{ route('free.courses') }}" id="courses_layout_submenu" role="button"
-                                            data-bs-toggle="dropdown" aria-expanded="false">
-                                            Free Courses
+                                        <a class="nav-link" href="{{ route('single.package', ['id' => $package->id]) }}" id="courses_layout_submenu" 
+                                           aria-expanded="false">
+                                           {{$package->package_title}}
                                         </a>
                                     </li>
-                                    <li class="dropdown">
-                                        <a class="nav-link" href="{{ route('premium.course') }}" id="courses_layout_submenu" role="button"
-                                            data-bs-toggle="dropdown" aria-expanded="false">
-                                            Premium
-                                            Courses
-                                        </a>
-                                    </li>
-                                    <li class="dropdown">
-                                        <a class="nav-link" href="{{env('APP_URL')}}home#section-new-course" id="courses_layout_submenu" role="button"
-                                            data-bs-toggle="dropdown" aria-expanded="false">
-                                            Educational Bundles
-                                        </a>
-                                    </li>
-                                   <li class="dropdown">
-                                        <a class="nav-link" href="#" id="courses_details_submenu" role="button"
-                                            data-bs-toggle="dropdown" aria-expanded="false">
-                                            Courses Details
-                                        </a>
-                                        <ul class="dropdown-menu" aria-labelledby="courses_details_submenu">
-                                            <li><a href="course_details.html">Course Details V.1</a></li>
-                                            <li><a href="course_details_2.html">Course Details V.2</a></li>
-                                        </ul>
-                                    </li>
+                                    @endforeach
+                                 
+
                                 </ul>
                             </li>
                             <li class="dropdown">
@@ -270,17 +255,8 @@ box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px">
                                     <li><a href="error.html">404 Error</a></li>
                                 </ul>
                             </li>
-                            <li class="dropdown">
-                                <a class="nav-link" href="#" id="blog_submenu" role="button"
-                                    data-bs-toggle="dropdown" aria-expanded="false">
-                                    Blog
-                                </a>
-                                <ul class="dropdown-menu" aria-labelledby="blog_submenu">
-                                    <li><a href="blog.html">Our Blogs</a></li>
-                                    <li><a href="blog_details.html">Blog Details</a></li>
-                                </ul>
-                            </li>
-                            <li><a class="nav-link" href="contact.html">Contact</a></li>
+                            <li><a class="nav-link" href="{{ route('blog') }}">Blog</a></li>
+                            <li><a class="nav-link" href="{{ route('contact.us') }}">Contact</a></li>
                         </ul>
                     </div>
                 </nav>

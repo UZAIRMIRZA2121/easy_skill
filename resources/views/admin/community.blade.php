@@ -79,7 +79,7 @@
          <div id="kt_app_content" class="app-content flex-column-fluid">
              <div id="kt_app_content_container" class="app-container container-xxl">
                 <div class="card  mb-2">
-                        <div class="card-header cursor-pointer w-100 text-center">
+                        <div class="card-header cursor-pointer w-100 text-center yello-gradient-row">
                             <h1 class="d-block m-auto"> <span> <img src="{{ asset('sidebaricon/social.png') }}" alt=""
                                         width="30px" class="mx-3 mb-3">Community</span></h1>
                             

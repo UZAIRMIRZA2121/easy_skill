@@ -73,7 +73,7 @@
             <!--begin::Toolbar-->
             <div class="container package_container  ">
                 <div class="card  mb-2">
-                    <div class="card-header cursor-pointer w-100 text-center">
+                    <div class="card-header cursor-pointer w-100 text-center yello-gradient-row">
                         <h1 class="d-block m-auto"> <span> <img src="{{ asset('sidebaricon/digital-marketing.png') }}"
                                     alt="" width="30px" class="mx-3 mb-3">Marketing Resources</span></h1>
 

@@ -71,7 +71,7 @@
                       <div class="item_price">
                         <span class="sale_price"> Rs {{ $single_package->price }}</span>
                       </div>
-                      <a href="pricing.html" class="btn btn_dark">
+                      <a href="{{ route('register.by.referal.pckge', ['referral_code' => 0, 'pckg' => $single_package->id ?? null]) }}" class="btn btn_dark">
                         <span>
                           <small>Get Course</small>
                           <small>Get Course</small>
@@ -157,7 +157,7 @@
                     <div class="item_price">
                       <span class="sale_price"> Rs {{ $single_package->price }}</span>
                     </div>
-                    <a href="pricing.html" class="btn btn_dark">
+                    <a href="{{ route('register.by.referal.pckge', ['referral_code' => 0, 'pckg' => $single_package->id ?? null]) }}" class="btn btn_dark">
                       <span>
                         <small>Get Course</small>
                         <small>Get Course</small>

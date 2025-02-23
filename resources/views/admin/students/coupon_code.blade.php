@@ -39,7 +39,7 @@
             <!--begin::Content container-->
             <div id="kt_app_content_container" class="app-container container-xxl">
                 <div class="card  mb-2">
-                    <div class="card-header cursor-pointer w-100 text-center">
+                    <div class="card-header cursor-pointer w-100 text-center yello-gradient-row">
                         <h1 class="d-block m-auto"> <span> <img src="{{ asset('sidebaricon/coupon.png') }}" alt=""
                                     width="30px" class="mx-3 mb-3">Discount Codes</span></h1>
                         
@@ -102,7 +102,7 @@
                                         <td>
                                             <div class="d-flex gx-3">
                                                 <!-- Add the data-coupon-code attribute -->
-                                                <button class="btn btn-sm btn-light-info menu-link copy-btn" 
+                                                <button class="btn btn-sm custom-btn  copy-btn" 
                                                         data-coupon-code="{{ $coupon->code }}">Copy Code</button>
                                             </div>
                                         </td>

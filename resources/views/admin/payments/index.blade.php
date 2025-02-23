@@ -40,7 +40,7 @@
             <div id="kt_app_content_container" class="app-container container-xxl">
                 <div class="card  mb-2">
                     <div class=" ">
-                        <div class="card-header cursor-pointer w-100 text-center">
+                        <div class="card-header cursor-pointer w-100 text-center yello-gradient-row">
                             <h1 class="d-block m-auto"> <span> <img src="{{ asset('sidebaricon/bank.png') }}" alt=""
                                         width="30px" class="mx-3 mb-3">Bank Details</span></h1>
                             
@@ -93,7 +93,7 @@
                                         <td>{{ $payment_method->account_number }}</td>
                                         <td class=" d-flex  text-start">
                                             <a href="{{ Auth::user()->role == 1 ? route('payment.admin.edit', ['payment' => $payment_method->id]):route('payments.edit', ['payment' => $payment_method->id])  }}"
-                                                        class="menu-link px-3 btn btn-primary btn-sm mx-2" data-kt-docs-table-filter="edit_row">
+                                                        class=" px-3 btn custom-btn btn-sm mx-2" data-kt-docs-table-filter="edit_row">
                                                         Edit
                                                     </a>
                                                     @if(auth::user()->role == 1)
