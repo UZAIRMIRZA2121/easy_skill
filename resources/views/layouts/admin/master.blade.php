@@ -305,8 +305,9 @@
                 height: 232px;
             }
             .app-sidebar-logo-default{
-                width: 75%;
-                margin: 9px 0px;
+                /* width: 75%; */
+                margin: 5px 0px;
+                height: 40px;
             }
         }
 
@@ -335,7 +336,7 @@
 }
 
 .yello-gradient-row {
-    background: linear-gradient(90deg, #fff 0%, #f8b634 50%, #fff 100%);
+    /* background: linear-gradient(90deg, #fff 0%, #f8b634 50%, #fff 100%); */
 }
 
     </style>

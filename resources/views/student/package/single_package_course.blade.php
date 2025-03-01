@@ -6,10 +6,10 @@
     <!--<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>-->
     <style>
         :root {
-            --primary-color: #F9C221;
-            --hover-primary-color: #FBC116;
+            --primary-color: #f8b634;
+            --hover-primary-color: #f8b634;
             --secondary-color: #04245C;
-            --dark-secondary-color: #160430;
+            --dark-secondary-color: #000;
             --text-color: #fff;
         }
 
@@ -310,7 +310,7 @@
                                         <!-- Progress Bar -->
                                         <div class="progress my-3">
                                             <div class="progress-bar progress-bar-striped progress-bar-animated"
-                                                style="background-color: #4a219c; width: {{ $watch_percentage }}%"
+                                                style="background-color: #f8b634; width: {{ $watch_percentage }}%"
                                                 role="progressbar" aria-valuenow="{{ $watch_percentage }}" aria-valuemin="0"
                                                 aria-valuemax="100">
                                                 {{-- <b>{{ round($watch_percentage) }}%</b> --}}

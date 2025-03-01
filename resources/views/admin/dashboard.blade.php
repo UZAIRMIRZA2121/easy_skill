@@ -1,7 +1,7 @@
 @extends('layouts.admin.master')
 
 @section('admin')
- 
+
     <!--begin::Content wrapper-->
     <div class="d-flex  flex-column card flex-column-fluid">
         <!--begin::Content-->
@@ -15,7 +15,7 @@
 
                     <!--end::Col-->
                     <div class="settings-top-widget" data-intro="Keep track of all your earnings">
-                        <div class="row gx-3 gy-2 mb-5">
+                        <div class="">
                             <div class="col-xl-12 mb-4 showOnlyMob pt-2 ">
                                 <!--begin::Col-->
                                 <!--begin::Card widget 11-->
@@ -24,7 +24,7 @@
                                     <div class="card-body text-center p-3 pt-2"
                                         style="background-color:#f8f5ff; 
                                      
-                                    border: 3px solid #ead9d775; 
+                                    border: 2px solid #000; 
                                     border-radius: 10px; 
                                     background-image: url('{{ env('APP_URL') }}/profile_bg.jpg');; 
                                     background-size: cover; 
@@ -103,33 +103,45 @@ $img = $images[$package->id] ?? 'default.png'; // Fallback to 'default.png' if n
                                     border: 3px solid #ead9d775;
                                     border-radius: 10px;
                                 }
+
                                 .top-box-yellow {
                                     background-color: #f8b634 !important;
-                                    border: 3px solid #ead9d775;
+                                    border: 3px solid #000;
                                     border-radius: 10px;
+                                    height: 130px;
                                 }
+
                                 .top-box-black {
-                                    background-color: #071437;
-                                   
-                                    border: 3px solid #ead9d775;
+                                    background-color: #000;
+
+                                    border: 3px solid #000;
                                     border-radius: 10px;
+                                    height: 130px;
                                 }
+
                                 .top-box-black #top-box-heading {
                                     color: #fff;
-                                   
+
+
+                                }
+
+                                #top-box-black h1 {
+                                    color: #fff;
                                 }
 
                                 #top-inner-box {
-                                    margin-top: 18px !important;
+                                    margin-top: 15px !important;
                                 }
 
                                 #top-box-heading {
                                     font-size: large;
+                                    font-size: 23px;
                                 }
+
                                 #top-inner-box h1 {
-                                        font-size: 2rem ;
-                                        font-weight: 800;
-                                    }
+                                    font-size: 2rem;
+                                    font-weight: 800;
+                                }
 
 
                                 @media (max-width: 768px) {
@@ -145,106 +157,220 @@ $img = $images[$package->id] ?? 'default.png'; // Fallback to 'default.png' if n
                                     }
 
                                     #top-inner-box h1 {
-                                        font-size: 1.7rem ;
-                                        font-weight: 800;
+                                        font-size: 1.7rem;
+                                        font-weight: 800 !important;
+                                        font-size: 30px;
                                     }
 
                                     #top-inner-box {
                                         margin-top: 5px !important;
                                     }
-                                    #top-box-heading {
-                                    font-size: 1.15rem ;
-                                    font-weight: 600;
 
-                                }
+                                    #top-box-heading {
+                                        font-size: 1.15rem;
+                                        font-weight: 600;
+
+                                    }
 
 
                                     .mobile_responisve .row {
                                         margin: 10px
+                                    }
 
+                                    .top-box-yellow {
+
+                                        height: 85px;
+                                    }
+
+                                    .top-box-black {
+
+                                        height: 85px;
                                     }
                                 }
                             </style>
+                                <style>
+                                    .dash-profile {
+                                        content: "";
+                                        top: 75px;
+                                        left: 0;
+                                        width: 105%;
+                                        height: 150px;
+                                        background-image: url('{{ config('APP_URL') }}/assets/images/profile-bg.png');
+                                        border-radius: 10px 10px 0 0;
+
+
+                                    }
+    
+                                    .profile-bg {
+                                        position: relative;
+                                        margin-top: 30px
+                                    }
+    
+                                    .settings-menu {
+                                        /* margin-top: 25px; */
+                                    }
+    
+                                    .profile-img img {
+                                        border-radius: 50%;
+                                    }
+    
+                                    .profile-name a {
+                                        color: #000;
+                                        font-size: 24px
+                                    }
+                                    .settings-menu{
+                                        border: 2px solid #000; /* Change #000 to your desired border color */
+                                        height: 272px;
+                                        border-radius: 10px;
+                                        width: 382px;
+                                    }
+                                    @media (max-width: 1025px) {
+                                        .settings-menu{
+                                        width: 188px;
+                                    }
+                                }
+                                @media (min-width: 1026px) and (max-width: 1440px) {
+                                    .settings-menu {
+                                        width: 333px; /* Adjust the width as needed */
+                                    }
+                                }
+                              
+                                </style>
+
+                        
                             @if (Auth::user()->role == 0)
-                                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 mt-sm-0 mt-md-2 ">
+                            
+                                <div class="row">
+                                    <div class="col-md-4 d-none d-lg-block">
+                                        @if (Auth::user()->role == 0)
+                                            <div class=" text-center profile-background mt-3" >
+                                                <div class="d-flex justify-content-center mx-5">
+                                                    <div class="settings-widget dash-profile">
+                                                        <div class="settings-menu">
+                                                            <div class="profile-bg">
+                                                                <div class="profile-img">
+                                                                    <a href="#">
+                                                                        @if (Auth::user()->profile_photo_path)
+                                                                            <img src="{{ asset('profile-image/' . Auth::user()->profile_photo_path) }}"
+                                                                                 alt="Profile Image"
+                                                                                 width="140"
+                                                                                 style="border: 2px solid #000; padding: 2px;">
+                                                                        @else
+                                                                            <img src="{{ asset('assets/images/defaultprofile.jpg') }}"
+                                                                                 alt="Default Profile"
+                                                                                 width="140"
+                                                                                 style="border: 2px solid #000; padding: 2px;">
+                                                                        @endif
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="profile-group mt-2">
+                                                                <div class="profile-name text-center">
+                                                                    <h4>
+                                                                        <a href="#">{{ Auth::user()->first_name }} {{ Auth::user()->last_name }}</a>
+                                                                    </h4>
+                                    
+                                                                    @isset(Auth::user()->package)
+                                                                        <p class="badge text-white"
+                                                                           style="background-color: {{ Auth::user()->package->color_code ?? '#000' }};
+                                                                                  color: {{ Auth::user()->package->text_color_code ?? '#fff' }};
+                                                                                  line-height: 1;
+                                                                                  border-radius: 10px 1px 10px 1px; 
+                                                                                  border-bottom: 3px solid rgba(0, 0, 0, 0.3); 
+                                                                                  border-right: 3px solid rgba(0, 0, 0, 0.3);">
+                                                                            {{ Auth::user()->package->package_title }}
+                                                                        </p>
+                                                                    @endisset
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                    @endif
+                                    
+                                    </div>
+                                    <div class="col-sm-12 col-md-12 col-lg-8">
+                                        <div class="row">
+                                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 mt-sm-0 mt-md-3 ">
                                     <div class="card shadow-sm" style="border-radius: 15px;">
                                         <div id="top-box " class="container overflow-hidden  top-box-yellow">
                                             <div class="row gx-5   m-2 " id="top-inner-box">
-                                                <div class="col-8">
+                                                <div class="col-12">
                                                     <span class="font-weight-bold text-gray-800"
                                                         id="top-box-heading">Today's</span>
                                                     <h1 class="mt-2 gordita-bold counter-value   fw-bold"
                                                         data-kt-countup="true" data-kt-countup-value="{{ $today_earning }}"
-                                                        data-kt-countup-prefix="Rs "
-                                                        style="font-weight: 800!important;color: #071437;">0
+                                                        data-kt-countup-prefix="Rs ">0
                                                     </h1>
                                                 </div>
-                                                <div class="col-4 text-end">
+                                                {{-- <div class="col-4 text-end">
                                                     <img src="{{ asset('assets/images/cash.png') }}" class="opacity-25"
                                                         alt="" height="50">
-                                                </div>
+                                                </div> --}}
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 mt-sm-0 mt-md-3">
                                     <div class="card shadow-sm" style="border-radius: 15px;">
                                         <div id="top-box " class="container overflow-hidden top-box-yellow">
                                             <div class="row gx-5  m-2" id="top-inner-box">
-                                                <div class="col-8">
+                                                <div class="col-12">
                                                     <span class="text-gray-800 " id="top-box-heading">Last 7 Days</span>
                                                     <h1 class="mt-3 gordita-bold counter-value " data-kt-countup="true"
                                                         data-kt-countup-value="{{ $last7Days_earning }}"
-                                                        data-kt-countup-prefix="Rs "
-                                                        style="font-weight: 800;color: #071437;">0</h1>
+                                                        data-kt-countup-prefix="Rs ">0</h1>
                                                 </div>
-                                                <div class="col-4 text-end">
+                                                {{-- <div class="col-4 text-end">
                                                     <img src="{{ asset('assets/images/hand.png') }}" class="opacity-25 "
                                                         alt="" height="50">
-                                                </div>
+                                                </div> --}}
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 mt-sm-0 mt-md-3">
                                     <div class="card shadow-sm" style="border-radius: 15px;">
                                         <div id="top-box " class="container overflow-hidden top-box-black">
                                             <div class="row gx-5  m-2" id="top-inner-box">
-                                                <div class="col-8">
+                                                <div class="col-12">
                                                     <span class="" id="top-box-heading">Last 30 Days</span>
                                                     <h1 class="mt-2 gordita-bold counter-value " data-kt-countup="true"
                                                         data-kt-countup-value="{{ $last30Days_earning }}"
-                                                        data-kt-countup-prefix="Rs "
-                                                        style="font-weight: 800;color: #fff;">0</h1>
+                                                        data-kt-countup-prefix="Rs " style="color: #fff">0</h1>
                                                 </div>
-                                                <div class="col-4 text-end">
+                                                {{-- <div class="col-4 text-end">
                                                     <img src="{{ asset('assets/images/bar-chart.png') }}"
                                                         class="opacity-25 " alt="" height="50">
-                                                </div>
+                                                </div> --}}
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 mt-sm-0 mt-md-3">
                                     <div class="card shadow-sm" style="border-radius: 15px;">
                                         <div id="top-box " class="container overflow-hidden top-box-black">
                                             <div class="row gx-5  m-2" id="top-inner-box">
-                                                <div class="col-8">
+                                                <div class="col-12">
                                                     <span class="    " id="top-box-heading">Total
                                                         Earning</span>
                                                     <h1 class="mt-2 gordita-bold counter-value" data-kt-countup="true"
                                                         data-kt-countup-value="{{ $all_time__earning }}"
-                                                        data-kt-countup-prefix="Rs "
-                                                        style="font-weight: 800;color: #fff;">0</h1>
+                                                        data-kt-countup-prefix="Rs " style="color: #fff">0</h1>
                                                 </div>
-                                                <div class="col-4 text-end">
+                                                {{-- <div class="col-4 text-end">
                                                     <img src="{{ asset('assets/images/gift-box.png') }}"
                                                         class="opacity-25 " alt="" height="50">
-                                                </div>
+                                                </div> --}}
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+                            </div>
+                            </div>
+                            </div>
+
                             @else
                                 <div class="col-xl-4 col-lg-6 col-sm-6">
                                     <div class="card shadow-sm">
@@ -256,8 +382,7 @@ $img = $images[$package->id] ?? 'default.png'; // Fallback to 'default.png' if n
                                                     <h1 class="mt-2 gordita-bold counter-value text-danger"
                                                         data-kt-countup="true"
                                                         data-kt-countup-value="{{ $totalPaid }}"
-                                                        data-kt-countup-prefix=" "
-                                                        style="font-size: 20px;font-weight: 800;">0</h1>
+                                                        data-kt-countup-prefix=" ">0</h1>
                                                 </div>
                                                 <div class="col-4 text-end">
                                                     <img src="{{ asset('assets/images/gift-box.png') }}"
@@ -276,8 +401,7 @@ $img = $images[$package->id] ?? 'default.png'; // Fallback to 'default.png' if n
                                                     <h1 class="mt-2 gordita-bold counter-value text-danger"
                                                         data-kt-countup="true"
                                                         data-kt-countup-value="{{ $totalRequested }}"
-                                                        data-kt-countup-prefix=" "
-                                                        style="font-size: 20px;font-weight: 800;">0</h1>
+                                                        data-kt-countup-prefix=" ">0</h1>
                                                 </div>
                                                 <div class="col-4 text-end">
                                                     <img src="{{ asset('assets/images/gift-box.png') }}"
@@ -309,7 +433,7 @@ $img = $images[$package->id] ?? 'default.png'; // Fallback to 'default.png' if n
                                 </div>
 
                                 <!--STudent record total   verify  unverify  -->
-                                <div class="col-xl-4 col-lg-6 col-sm-6">
+                                <div class="col-xl-4 col-lg-6 col-sm-6 mt-3">
                                     <div class="card shadow-sm">
                                         <div class="container overflow-hidden" style="background-color:#FFF7F5;">
                                             <div class="row gx-5  m-3">

@@ -1,52 +1,126 @@
-<div id="kt_app_sidebar" class="app-sidebar flex-column" data-kt-drawer="true" data-kt-drawer-name="app-sidebar"
-    data-kt-drawer-activate="{default: true, lg: false}" data-kt-drawer-overlay="true" data-kt-drawer-width="225px"
-    data-kt-drawer-direction="start" data-kt-drawer-toggle="#kt_app_sidebar_mobile_toggle">
+<!--begin::Sidebar-->
 
+<style>
+    .dash-profile {
+        position: absolute;
+        content: "";
+        top: 75px;
+        left: 0;
+        width: 100%;
+        height: 100px;
+      background-image: url('{{ config("APP_URL") }}/assets/images/profile-bg.png');
 
-    <!--begin::Logo-->
-    <div class="app-sidebar-logo px-6" id="kt_app_sidebar_logo">
-        <!--begin::Logo image-->
-        <a href="{{ route('dashboard') }}">
-            <img alt="Logo" src="{{ asset('assets/images/skillsider_logo.png') }}"
-                class="h-50px app-sidebar-logo-default">
+        border-radius: 5px 4px 0 0;
+    }
 
-            <img alt="Logo" src="{{ asset('assets/images/skillsider_icon.png') }}"
-                class="h-30px app-sidebar-logo-minimize">
-        </a>
-        <!--end::Logo image-->
+    .profile-bg {
+        position: relative;
+    }
 
-        <div id="kt_app_sidebar_toggle"
-            class="app-sidebar-toggle btn btn-icon btn-shadow btn-sm btn-color-muted btn-active-color-primary h-30px w-30px position-absolute top-50 start-100 translate-middle rotate active"
-            data-kt-toggle="true" data-kt-toggle-state="active" data-kt-toggle-target="body"
-            data-kt-toggle-name="app-sidebar-minimize">
+    .settings-menu {
+        margin-top: 25px;
+    }
 
-            <i class="ki-duotone ki-black-left-line fs-3 rotate-180"><span class="path1"></span><span
-                    class="path2"></span></i>
-        </div>
-        <!--end::Sidebar toggle-->
-    </div>
+    .profile-img img {
+        border-radius: 50%;
+    }
+
+    .profile-name a {
+        color: #000;
+    }
+</style>
+<style>
+    .mobile-side-bar {
+        height: 1100px;
+    }
     
+    @media screen and (max-width: 992px) {
+        .mobile-side-bar {
+            /* margin-bottom:230px; */
+            height: 1000px;
+        }
+    }
+</style>
+<div id="kt_app_sidebar" class="app-sidebar flex-column  " style=" max-height: 100%;background-color:#ffffff;
+    "
+    data-kt-drawer="true" data-kt-drawer-name="app-sidebar" data-kt-drawer-activate="{default: true, lg: false}"
+    data-kt-drawer-overlay="false" data-kt-drawer-width="100vw" data-kt-drawer-height="100vh"
+    data-kt-drawer-toggle="#kt_app_sidebar_mobile_toggle">
+    <!--begin::Logo-->
+    <div class="app-sidebar-logo px-6 bg-white fixed-top " id="kt_app_sidebar_logo">
+        <!--begin::Logo image-->
+        <a href="{{ route('dashboard') }}" class="text-dark">
+            <img alt="Logo" src="{{ asset('assets/images/skillsider_logo.png') }}"
+                class=" app-sidebar-logo-default " />
+        </a>
+        <!--begin::Logo image-->
+    </div>
     <!--end::Logo-->
     <!--begin::sidebar menu-->
-    <div class="app-sidebar-menu overflow-hidden flex-column-fluid">
+    <div class="app-sidebar-menu overflow-hidden bg-white ">
         <!--begin::Menu wrapper-->
-        <div id="kt_app_sidebar_menu_wrapper" class="app-sidebar-wrapper">
-            <!--begin::Scroll wrapper-->
-            <div id="kt_app_sidebar_menu_scroll" class="scroll-y my-5 mx-3" data-kt-scroll="true"
-                data-kt-scroll-activate="true" data-kt-scroll-height="auto"
-                data-kt-scroll-dependencies="#kt_app_sidebar_logo, #kt_app_sidebar_footer"
-                data-kt-scroll-wrappers="#kt_app_sidebar_menu" data-kt-scroll-offset="5px"
-                data-kt-scroll-save-state="true" style="height: 446px;">
+        <div id="kt_app_sidebar_menu_wrapper" style=" max-height: 100%;
+   " class="app-sidebar-wrapper">
+
+            @if (Auth::user()->role == 0)
+                <!--begin::Scroll wrapper-->
+                <div class="row mb-5 d-none d-lg-block  " style="height: 200px">
+                    <div class="card-body text-center pt-5 profile-background">
+                        <div class="d-flex justify-content-center  mx-5">
+                            <div class="settings-widget dash-profile">
+                                <div class="settings-menu">
+                                    <div class="profile-bg">
+                                        <div class="profile-img">
+                                            <a href="">
+                                                @if (Auth::user()->profile_photo_path)
+                                                    <img src="{{ asset('profile-image/' . Auth::user()->profile_photo_path) }}"
+                                                        alt="Img" width="140"
+                                                        style="border: 2px solid #000; padding: 2px;">
+                                            </a>
+                                        @else
+                                            <img src="{{ asset('assets/images/defaultprofile.jpg') }}" alt="Img"
+                                                width="140" style="border: 2px solid #000; padding: 2px;"></a>
+            @endif
+
+        </div>
+    </div>
+    <div class="profile-group mt-2">
+        <div class="profile-name text-center">
+            <h4><a href="">{{ Auth::user()->first_name }} {{ Auth::user()->last_name }}</a></h4>
+            <p class="badge text-white"
+                style="background-color:{{ Auth::user()->package->color_code ?? '' }}; color: {{ Auth::user()->package->text_color_code ?? '' }}; line-height: 1; border-radius: 10px 1px 10px 1px; 
+                                    border-bottom: 3px solid rgba(0, 0, 0, 0.3); border-right: 3px solid rgba(0, 0, 0, 0.3);"> {{ Auth::user()->package->package_title }}</p>
+        </div>
+    </div>
+</div>
+</div>
+<!--begin::Section-->
+</div>
+<!--end::Section-->
+</div>
+</div>
+@endif
+<hr class="text-dark  d-md-block d-none" style="margin-top: 50px">
+<div id="kt_app_sidebar_menu_scroll" class="my-5 mx-3" style="max-height: 100%; overflow-y: auto;" data-kt-scroll="true"
+    data-kt-scroll-activate="true" data-kt-scroll-height="700px"
+    data-kt-scroll-dependencies="#kt_app_sidebar_logo, #kt_app_sidebar_footer"
+    data-kt-scroll-wrappers="#kt_app_sidebar_menu" data-kt-scroll-offset="5px" data-kt-scroll-save-state="true">
+    <!--begin::Menu-->
+    <div class="menu menu-column menu-rounded menu-sub-indention fw-semibold fs-6 mobile-side-bar"
+        id="#kt_app_sidebar_menu" data-kt-menu="true" data-kt-menu-expand="false">
+        <div class="menu-item ">
+            <!--begin::Menu-->
+            <div class="menu menu-column menu-rounded menu-sub-indention fw-semibold fs-6" id="#kt_app_sidebar_menu"
+                data-kt-menu="true" data-kt-menu-expand="false">
                 <div class="menu-item ">
-                <!--begin::Menu-->
-                @if (Auth::user()->role == 1)
+                    @if (Auth::user()->role == 1)
                         <!--begin:Menu link-->
                         <a href="{{ route('std.index') }}">
-                            <span class="menu-link ">
+                            <span class="menu-link">
                                 <span class="menu-icon">
                                     <i class="fa  fa-home"></i>
                                 </span>
-                                <span class="menu-title text-light">Home</span>
+                                <span class="menu-title ">Home</span>
                             </span>
                         </a>
                         <!--end:Menu link-->
@@ -512,23 +586,28 @@
                             </span>
                         </a>
 
-                        {{-- <a>
+                        <a>
                             <form method="POST" action="{{ route('logout') }}">
                                 @csrf
                                 <button class="btn  py-2 px-4 ms-4 mt-3 btn-dark" type="submit"><i
                                         class="fa fa-power-off" aria-hidden="true"></i> Logout</button>
                             </form>
-                        </a> --}}
+                        </a>
                     @endif
-                    <!--end:Menu item-->
                 </div>
-                <!--end::Menu-->
+                <!--end:Menu item-->
             </div>
-            <!--end::Scroll wrapper-->
+            <!--end::Menu-->
         </div>
-        <!--end::Menu wrapper-->
+        <!--end:Menu item-->
     </div>
-    <!--end::sidebar menu-->
-
-    <!--end::Footer-->
+    <!--end::Menu-->
 </div>
+<!--end::Scroll wrapper-->
+</div>
+<!--end::Menu wrapper-->
+</div>
+<!--end::sidebar menu-->
+
+</div>
+<!--end::Sidebar-->

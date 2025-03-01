@@ -125,9 +125,7 @@ box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px">
 
 
             </ul>
-
             <!-- Login button - visible on small screens -->
-
             <div class="d-flex d-lg-none">
                 @if (Auth::check())
                     <a href="{{ route('login.page') }}">
@@ -161,22 +159,11 @@ box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px">
 
     </div>
 </nav>
-
-
 <span class="btn-mobile-nav" style="display:none!important">
-
 </span> --}}
-
-
-
 @php 
     $all_packages = App\Models\Packages::all();
-
 @endphp
-
-
-
-
 <!-- Site Header - Start
       ================================================== -->
 <header class="site_header site_header_1">

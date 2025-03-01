@@ -61156,7 +61156,7 @@ body {
     --bs-app-sidebar-base-toggle-btn-bg-color: #2B2B40;
     --bs-app-sidebar-base-toggle-btn-border-color: none;
     --bs-app-sidebar-base-border-color: none;
-    --bs-app-sidebar-light-bg-color: #131313;
+    --bs-app-sidebar-light-bg-color: #fff;
     --bs-app-sidebar-light-box-shadow: none;
     --bs-app-sidebar-light-separator-color: #2B2B40;
     --bs-app-sidebar-light-scrollbar-color-hover: #2B2B40;
@@ -61300,7 +61300,7 @@ body {
 }
 
 [data-kt-app-layout=dark-sidebar] .app-sidebar {
-    background-color: #131313;
+    background-color: #fff;
     border-right: 0
 }
 
