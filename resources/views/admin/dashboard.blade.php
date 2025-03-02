@@ -63,7 +63,7 @@
                                                                 4 => 'diamond_skill_sider.png',
                                                             ];
                                                             $package = Auth::user()->package; // Get the user's package
-$img = $images[$package->id] ?? 'default.png'; // Fallback to 'default.png' if no image is found
+                                                            $img = $images[$package->id] ?? 'default.png'; // Fallback to 'default.png' if no image is found
                                                         @endphp
                                                         @if ($package)
                                                             <span class="badge badge-lg d-flex align-items-center"
@@ -77,13 +77,11 @@ $img = $images[$package->id] ?? 'default.png'; // Fallback to 'default.png' if n
                                                 @endif
                                             </div>
                                         </div>
-
                                         <!--end::Section-->
                                     </div>
                                     <!--end::Body-->
                                 </div>
                                 <!--end::Card widget 11-->
-
                             </div>
                             <style>
                                 .mobile_responisve {
@@ -222,24 +220,20 @@ $img = $images[$package->id] ?? 'default.png'; // Fallback to 'default.png' if n
                                         border: 2px solid #000; /* Change #000 to your desired border color */
                                         height: 272px;
                                         border-radius: 10px;
-                                        width: 382px;
+                                        /* width: 382px; */
                                     }
                                     @media (max-width: 1025px) {
                                         .settings-menu{
-                                        width: 188px;
+                                        /* width: 188px; */
                                     }
                                 }
                                 @media (min-width: 1026px) and (max-width: 1440px) {
                                     .settings-menu {
-                                        width: 333px; /* Adjust the width as needed */
+                                        /* width: 333px; Adjust the width as needed */
                                     }
                                 }
-                              
                                 </style>
-
-                        
                             @if (Auth::user()->role == 0)
-                            
                                 <div class="row">
                                     <div class="col-md-4 d-none d-lg-block">
                                         @if (Auth::user()->role == 0)
