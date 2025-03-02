@@ -693,7 +693,7 @@
 
                         },
                         error: function() {
-                            alert('Failure from PHP side!!!');
+                        //   /  alert('Failure from PHP side!!!');
                         }
                     });
                 }
