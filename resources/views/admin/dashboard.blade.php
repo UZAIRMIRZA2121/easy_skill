@@ -293,7 +293,7 @@
                                                 <div class="col-12">
                                                     <span class="font-weight-bold text-gray-800"
                                                         id="top-box-heading">Today's</span>
-                                                    <h1 class="mt-2 gordita-bold counter-value   fw-bold"
+                                                    <h1 class="mt-2 gordita-bold counter-value  "
                                                         data-kt-countup="true" data-kt-countup-value="{{ $today_earning }}"
                                                         data-kt-countup-prefix="Rs ">0
                                                     </h1>
