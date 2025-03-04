@@ -10,8 +10,8 @@
             <img alt="Logo" src="{{ asset('assets/images/skillsider_logo.png') }}"
                 class="h-50px app-sidebar-logo-default">
 
-            <img alt="Logo" src="{{ asset('assets/images/skillsider_icon.png') }}"
-                class="h-30px app-sidebar-logo-minimize">
+            <img alt="Logo" src="{{ asset('assets/images/skillsider_icon.png') }}" style="margin: 0px -10px;"
+                class="h-50px app-sidebar-logo-minimize">
         </a>
         <!--end::Logo image-->
 

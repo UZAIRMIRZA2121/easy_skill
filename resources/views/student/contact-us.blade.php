@@ -1,45 +1,6 @@
 @extends('layouts.student.master')
 @section('main')
-<style>
-    body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-    }
 
-    .social-media-links {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .social-media-link {
-        text-align: center;
-        margin: 10px;
-        text-decoration: none;
-        color: #333;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .social-media-link img {
-        width: 100px;
-        /* Adjust icon size */
-        height: 100px;
-        /* Adjust icon size */
-        margin-bottom: 5px;
-    }
-
-    @media (max-width: 768px) {
-        .social-media-link img {
-            width: 80px;
-            /* Adjust icon size for smaller screens */
-            height: 80px;
-            /* Adjust icon size for smaller screens */
-        }
-    }
-</style>
 
 
 
@@ -49,35 +10,22 @@
 
         <!-- Page Section - Start
         ================================================== -->
+    
         <section class="page_banner">
           <div class="container">
-            <div class="content_wrapper" style="background-image: url('assets/images/banner/page_banner_image.png');">
-              <div class="row align-items-center">
-                <div class="col col-lg-6">
-                  <ul class="breadcrumb_nav unordered_list">
-                    <li><a href="index.html">Home</a></li>
-                    <li>Contact Us</li>
-                  </ul>
-                  <h1 class="page_title">Contacts</h1>
-                  <p class="page_description">
-                    Egestas sed tempus urna et pharetra. Leo integer malesuada nunc vel. Libero id faucibus nisl tincidunt eget nullam non nisi. Faucibus turpis in eu mi bibendum neque egestas
-                  </p>
-                  <form action="#">
-                    <div class="form_item mb-0">
-                      <input type="search" name="search" placeholder="What do you want to learn ?">
-                      <button type="submit" class="btn btn_dark">
-                        <span>
-                          <small>Search</small>
-                          <small>Search</small>
-                        </span>
-                      </button>
-                    </div>
-                  </form>
-                </div>
+              <div class="content_wrapper" style="background-image: url('assets/images/banner/page_banner_image.png');">
+                  <div class="row align-items-center d-block m-auto">
+                      <div class="col col-lg-12 text-center">
+                          <h1 class="page_title">Contacts</h1>
+                          <ul class="breadcrumb_nav unordered_list d-flex justify-content-center">
+                              <li><a href="index.html">Home</a></li>
+                              <li>Contact Us</li>
+                          </ul>
+                      </div>
+                  </div>
               </div>
-            </div>
           </div>
-        </section>
+      </section>
         <!-- Page Section - End
         ================================================== -->
 
