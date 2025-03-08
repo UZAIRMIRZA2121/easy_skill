@@ -289,7 +289,7 @@ $img = $images[$package->id] ?? 'default.png'; // Fallback to 'default.png' if n
                                     </div>
                                     <div class="col-sm-12 col-md-12 col-lg-8">
                                         <div class="row">
-                                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 mt-sm-0 mt-md-3 ">
+                                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 mt-sm-0 mt-md-3 mb-3 ">
                                                 <div class="card shadow-sm" style="border-radius: 15px;">
                                                     <div id="top-box " class="container overflow-hidden  top-box-yellow">
                                                         <div class="row gx-5   m-2 " id="top-inner-box">
@@ -310,7 +310,7 @@ $img = $images[$package->id] ?? 'default.png'; // Fallback to 'default.png' if n
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 mt-sm-0 mt-md-3">
+                                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 mt-sm-0 mt-md-3  mb-3 ">
                                                 <div class="card shadow-sm" style="border-radius: 15px;">
                                                     <div id="top-box " class="container overflow-hidden top-box-yellow">
                                                         <div class="row gx-5  m-2" id="top-inner-box">
@@ -330,7 +330,7 @@ $img = $images[$package->id] ?? 'default.png'; // Fallback to 'default.png' if n
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 mt-sm-0 mt-md-3">
+                                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 mt-sm-0 mt-md-3  mb-3 ">
                                                 <div class="card shadow-sm" style="border-radius: 15px;">
                                                     <div id="top-box " class="container overflow-hidden top-box-black">
                                                         <div class="row gx-5  m-2" id="top-inner-box">
@@ -350,7 +350,7 @@ $img = $images[$package->id] ?? 'default.png'; // Fallback to 'default.png' if n
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 mt-sm-0 mt-md-3">
+                                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 mt-sm-0 mt-md-3  mb-5">
                                                 <div class="card shadow-sm" style="border-radius: 15px;">
                                                     <div id="top-box " class="container overflow-hidden top-box-black">
                                                         <div class="row gx-5  m-2" id="top-inner-box">

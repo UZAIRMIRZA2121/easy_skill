@@ -159,12 +159,12 @@
                     <div class="menu-content d-flex align-items-center px-3">
                         <!--begin::Avatar-->
                         <div class="symbol symbol-50px ">
-                            <img alt="Logo" src="{{ asset('profile-image/' . Auth::user()->profile_photo_path) }}">
+                            <img alt="Logo" src="{{ asset('profile-image/' . Auth::user()->profile_photo_path) }}" style="border-radius: 50%">
                         </div>
                         <!--end::Avatar-->
     
                         <!--begin::Username-->
-                        <div class="d-flex flex-column">
+                        <div class="d-flex flex-column mx-3">
                             <div class="fw-bold d-flex align-items-center fs-5">
                                 {{ Auth::user()->first_name }} <span
                                     class="badge badge-light-success fw-bold fs-8 px-2 py-1 ms-2">{{ Auth::user()->package->package_title }}</span>
@@ -246,15 +246,7 @@
             // Attach the scroll event listener
             window.addEventListener('scroll', toggleNavbarVisibility);
         </script>
-
     @endif
-
-
-
-
-
-
-
     <div class="bg-white d-lg-none">
         <!--begin::Logo image-->
         <a href="{{ route('dashboard') }}" class="text-dark">
