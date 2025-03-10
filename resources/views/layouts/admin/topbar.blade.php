@@ -142,7 +142,7 @@
                 <input type="hidden" name="user_id" value="{{ Auth::id() }}">
             </form>
         </div>
-        <div class="app-navbar-item mx-2 me-md-4 d-block m-auto" id="kt_header_user_menu_toggle">
+        <div class="app-navbar-item mx-2 me-md-4 d-none d-lg-block m-auto" id="kt_header_user_menu_toggle">
             <!--begin::Menu wrapper-->
             <div class="cursor-pointer symbol symbol-35px" data-kt-menu-trigger="{default: 'click', lg: 'hover'}"
                 data-kt-menu-attach="parent" data-kt-menu-placement="bottom-end">

@@ -512,13 +512,15 @@
                             </span>
                         </a>
 
-                        {{-- <a>
-                            <form method="POST" action="{{ route('logout') }}">
-                                @csrf
-                                <button class="btn  py-2 px-4 ms-4 mt-3 btn-dark" type="submit"><i
-                                        class="fa fa-power-off" aria-hidden="true"></i> Logout</button>
-                            </form>
-                        </a> --}}
+                        <a href="#" class="d-sm-none d-block" onclick="document.getElementById('logout-form').submit(); return false;">
+                            <button class="btn py-2 px-4 ms-4 mt-3 btn-dark" type="button">
+                                <i class="fa fa-power-off" aria-hidden="true"></i> Logout
+                            </button>
+                        </a>
+                        <form id="logout-form" method="POST" action="{{ route('logout') }}" style="display: none;">
+                            @csrf
+                        </form>
+                        
                     @endif
                     <!--end:Menu item-->
                 </div>
